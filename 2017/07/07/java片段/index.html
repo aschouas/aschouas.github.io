@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://aschouas.com">
-  <title>白橡树</title>
+  <title>java片段 | 白橡树</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="擅长吹牛，放治疗术">
-<meta name="keywords" content="前端,Python，java，html5，开发者，j2ee,极客,Developer,Geek,html,css,css3,mysql">
-<meta property="og:type" content="website">
-<meta property="og:title" content="白橡树">
-<meta property="og:url" content="http://aschouas.com/index.html">
+  <meta name="description" content="很热">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java片段">
+<meta property="og:url" content="http://aschouas.com/2017/07/07/java片段/index.html">
 <meta property="og:site_name" content="白橡树">
-<meta property="og:description" content="擅长吹牛，放治疗术">
+<meta property="og:description" content="很热">
+<meta property="og:updated_time" content="2017-07-17T05:39:16.629Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="白橡树">
-<meta name="twitter:description" content="擅长吹牛，放治疗术">
+<meta name="twitter:title" content="java片段">
+<meta name="twitter:description" content="很热">
   
     <link rel="alternative" href="/atom.xml" title="白橡树" type="application/atom+xml">
   
@@ -134,16 +135,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-java片段" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-java片段" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/07/java片段/">java片段</a>
+    <h1 class="article-title" itemprop="name">
+      java片段
     </h1>
   
 
@@ -157,7 +156,60 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote class="blockquote-center">很热</blockquote>
-        
+
+<a id="more"></a>
+<h3 id="字符串有整型的相互转换"><a href="#字符串有整型的相互转换" class="headerlink" title="字符串有整型的相互转换"></a>字符串有整型的相互转换</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String a = String.valueOf(<span class="number">2</span>);   <span class="comment">//integer to numeric string  </span></div><div class="line"><span class="keyword">int</span> i = Integer.parseInt(a); <span class="comment">//numeric string to an int</span></div></pre></td></tr></table></figure>
+<h3 id="向文件末尾添加内容"><a href="#向文件末尾添加内容" class="headerlink" title="向文件末尾添加内容"></a>向文件末尾添加内容</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">BufferedWriter out = <span class="keyword">null</span>;  </div><div class="line"><span class="keyword">try</span> &#123;  </div><div class="line">    out = <span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> FileWriter(”filename”, <span class="keyword">true</span>));  </div><div class="line">    out.write(”aString”);  </div><div class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;  </div><div class="line">    <span class="comment">// error processing code  </span></div><div class="line">&#125; <span class="keyword">finally</span> &#123;  </div><div class="line">    <span class="keyword">if</span> (out != <span class="keyword">null</span>) &#123;  </div><div class="line">        out.close();  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="得到当前方法的名字"><a href="#得到当前方法的名字" class="headerlink" title="得到当前方法的名字"></a>得到当前方法的名字</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String methodName = Thread.currentThread().getStackTrace()[<span class="number">1</span>].getMethodName();</div></pre></td></tr></table></figure>
+<h3 id="转字符串到日期"><a href="#转字符串到日期" class="headerlink" title="转字符串到日期"></a>转字符串到日期</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.util.Date = java.text.DateFormat.getDateInstance().parse(date String);</div></pre></td></tr></table></figure>
+<p>亦或是<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SimpleDateFormat format = <span class="keyword">new</span> SimpleDateFormat( <span class="string">"dd.MM.yyyy"</span> );  </div><div class="line">Date date = format.parse( myString );</div></pre></td></tr></table></figure></p>
+<h3 id="使用JDBC链接Oracle"><a href="#使用JDBC链接Oracle" class="headerlink" title="使用JDBC链接Oracle"></a>使用JDBC链接Oracle</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OracleJdbcTest</span>  </span></div><div class="line">&#123;  </div><div class="line">    String driverClass = <span class="string">"oracle.jdbc.driver.OracleDriver"</span>;  </div><div class="line"></div><div class="line">    Connection con;  </div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FileInputStream fs)</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException, FileNotFoundException, IOException  </span></div><div class="line">    &#123;  </div><div class="line">        Properties props = <span class="keyword">new</span> Properties();  </div><div class="line">        props.load(fs);  </div><div class="line">        String url = props.getProperty(<span class="string">"db.url"</span>);  </div><div class="line">        String userName = props.getProperty(<span class="string">"db.user"</span>);  </div><div class="line">        String password = props.getProperty(<span class="string">"db.password"</span>);  </div><div class="line">        Class.forName(driverClass);  </div><div class="line"></div><div class="line">        con=DriverManager.getConnection(url, userName, password);  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fetch</span><span class="params">()</span> <span class="keyword">throws</span> SQLException, IOException  </span></div><div class="line">    &#123;  </div><div class="line">        PreparedStatement ps = con.prepareStatement(<span class="string">"select SYSDATE from dual"</span>);  </div><div class="line">        ResultSet rs = ps.executeQuery();  </div><div class="line"></div><div class="line">        <span class="keyword">while</span> (rs.next())  </div><div class="line">        &#123;  </div><div class="line">            <span class="comment">// do the thing you do  </span></div><div class="line">        &#125;  </div><div class="line">        rs.close();  </div><div class="line">        ps.close();  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span></div><div class="line">    &#123;  </div><div class="line">        OracleJdbcTest test = <span class="keyword">new</span> OracleJdbcTest();  </div><div class="line">        test.init();  </div><div class="line">        test.fetch();  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>其他数据库同理</p>
+<h3 id="把-Java-util-Date-转成-sql-Date"><a href="#把-Java-util-Date-转成-sql-Date" class="headerlink" title="把 Java util.Date 转成 sql.Date"></a>把 Java util.Date 转成 sql.Date</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java.util.Date utilDate = <span class="keyword">new</span> java.util.Date();  </div><div class="line">java.sql.Date sqlDate = <span class="keyword">new</span> java.sql.Date(utilDate.getTime());</div></pre></td></tr></table></figure>
+<h3 id="使用NIO进行快速的文件拷贝"><a href="#使用NIO进行快速的文件拷贝" class="headerlink" title="使用NIO进行快速的文件拷贝"></a>使用NIO进行快速的文件拷贝</h3><pre><code>public static void fileCopy( File in, File out )  
+            throws IOException  
+    {  
+        FileChannel inChannel = new FileInputStream( in ).getChannel();  
+        FileChannel outChannel = new FileOutputStream( out ).getChannel();  
+        try 
+        {  
+            int maxCount = (64 * 1024 * 1024) - (32 * 1024);  
+            long size = inChannel.size();  
+            long position = 0;  
+            while ( position &lt; size )  
+            {  
+               position += inChannel.transferTo( position, maxCount, outChannel );  
+            }  
+        }  
+        finally 
+        {  
+            if ( inChannel != null )  
+            {  
+               inChannel.close();  
+            }  
+            if ( outChannel != null )  
+            {  
+                outChannel.close();  
+            }  
+        }  
+    }
+</code></pre><h3 id="创建图片的缩略图"><a href="#创建图片的缩略图" class="headerlink" title="创建图片的缩略图"></a>创建图片的缩略图</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">createThumbnail</span><span class="params">(String filename, <span class="keyword">int</span> thumbWidth, <span class="keyword">int</span> thumbHeight, <span class="keyword">int</span> quality, String outFilename)</span>  </span></div><div class="line">        <span class="keyword">throws</span> InterruptedException, FileNotFoundException, IOException  </div><div class="line">    &#123;  </div><div class="line">        <span class="comment">// load image from filename  </span></div><div class="line">        Image image = Toolkit.getDefaultToolkit().getImage(filename);  </div><div class="line">        MediaTracker mediaTracker = <span class="keyword">new</span> MediaTracker(<span class="keyword">new</span> Container());  </div><div class="line">        mediaTracker.addImage(image, <span class="number">0</span>);  </div><div class="line">        mediaTracker.waitForID(<span class="number">0</span>);  </div><div class="line">        <span class="comment">// use this to test for errors at this point: System.out.println(mediaTracker.isErrorAny());  </span></div><div class="line"></div><div class="line">        <span class="comment">// determine thumbnail size from WIDTH and HEIGHT  </span></div><div class="line">        <span class="keyword">double</span> thumbRatio = (<span class="keyword">double</span>)thumbWidth / (<span class="keyword">double</span>)thumbHeight;  </div><div class="line">        <span class="keyword">int</span> imageWidth = image.getWidth(<span class="keyword">null</span>);  </div><div class="line">        <span class="keyword">int</span> imageHeight = image.getHeight(<span class="keyword">null</span>);  </div><div class="line">        <span class="keyword">double</span> imageRatio = (<span class="keyword">double</span>)imageWidth / (<span class="keyword">double</span>)imageHeight;  </div><div class="line">        <span class="keyword">if</span> (thumbRatio &lt; imageRatio) &#123;  </div><div class="line">            thumbHeight = (<span class="keyword">int</span>)(thumbWidth / imageRatio);  </div><div class="line">        &#125; <span class="keyword">else</span> &#123;  </div><div class="line">            thumbWidth = (<span class="keyword">int</span>)(thumbHeight * imageRatio);  </div><div class="line">        &#125;  </div><div class="line"></div><div class="line">        <span class="comment">// draw original image to thumbnail image object and  </span></div><div class="line">        <span class="comment">// scale it to the new size on-the-fly  </span></div><div class="line">        BufferedImage thumbImage = <span class="keyword">new</span> BufferedImage(thumbWidth, thumbHeight, BufferedImage.TYPE_INT_RGB);  </div><div class="line">        Graphics2D graphics2D = thumbImage.createGraphics();  </div><div class="line">        graphics2D.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);  </div><div class="line">        graphics2D.drawImage(image, <span class="number">0</span>, <span class="number">0</span>, thumbWidth, thumbHeight, <span class="keyword">null</span>);  </div><div class="line"></div><div class="line">        <span class="comment">// save thumbnail image to outFilename  </span></div><div class="line">        BufferedOutputStream out = <span class="keyword">new</span> BufferedOutputStream(<span class="keyword">new</span> FileOutputStream(outFilename));  </div><div class="line">        JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);  </div><div class="line">        JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(thumbImage);  </div><div class="line">        quality = Math.max(<span class="number">0</span>, Math.min(quality, <span class="number">100</span>));  </div><div class="line">        param.setQuality((<span class="keyword">float</span>)quality / <span class="number">100.0f</span>, <span class="keyword">false</span>);  </div><div class="line">        encoder.setJPEGEncodeParam(param);  </div><div class="line">        encoder.encode(thumbImage);  </div><div class="line">        out.close();  </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="创建-JSON-格式的数据"><a href="#创建-JSON-格式的数据" class="headerlink" title="创建 JSON 格式的数据"></a>创建 JSON 格式的数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.json.JSONObject;  </div><div class="line">...  </div><div class="line">...  </div><div class="line">JSONObject json = <span class="keyword">new</span> JSONObject();  </div><div class="line">json.put(<span class="string">"city"</span>, <span class="string">"Mumbai"</span>);  </div><div class="line">json.put(<span class="string">"country"</span>, <span class="string">"India"</span>);  </div><div class="line">...  </div><div class="line">String output = json.toString();  </div><div class="line">...</div></pre></td></tr></table></figure>
+<h3 id="使用iText-JAR生成PDF"><a href="#使用iText-JAR生成PDF" class="headerlink" title="使用iText JAR生成PDF"></a>使用iText JAR生成PDF</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.File;  </div><div class="line"><span class="keyword">import</span> java.io.FileOutputStream;  </div><div class="line"><span class="keyword">import</span> java.io.OutputStream;  </div><div class="line"><span class="keyword">import</span> java.util.Date;  </div><div class="line"></div><div class="line"><span class="keyword">import</span> com.lowagie.text.Document;  </div><div class="line"><span class="keyword">import</span> com.lowagie.text.Paragraph;  </div><div class="line"><span class="keyword">import</span> com.lowagie.text.pdf.PdfWriter;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GeneratePDF</span> </span>&#123;  </div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </div><div class="line">        <span class="keyword">try</span> &#123;  </div><div class="line">            OutputStream file = <span class="keyword">new</span> FileOutputStream(<span class="keyword">new</span> File(<span class="string">"C:\\Test.pdf"</span>));  </div><div class="line"></div><div class="line">            Document document = <span class="keyword">new</span> Document();  </div><div class="line">            PdfWriter.getInstance(document, file);  </div><div class="line">            document.open();  </div><div class="line">            document.add(<span class="keyword">new</span> Paragraph(<span class="string">"Hello Kiran"</span>));  </div><div class="line">            document.add(<span class="keyword">new</span> Paragraph(<span class="keyword">new</span> Date().toString()));  </div><div class="line"></div><div class="line">            document.close();  </div><div class="line">            file.close();  </div><div class="line"></div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;  </div><div class="line"></div><div class="line">            e.printStackTrace();  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="HTTP-代理设置"><a href="#HTTP-代理设置" class="headerlink" title="HTTP 代理设置"></a>HTTP 代理设置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">System.getProperties().put(<span class="string">"http.proxyHost"</span>, <span class="string">"someProxyURL"</span>);  </div><div class="line">System.getProperties().put(<span class="string">"http.proxyPort"</span>, <span class="string">"someProxyPort"</span>);  </div><div class="line">System.getProperties().put(<span class="string">"http.proxyUser"</span>, <span class="string">"someUserName"</span>);  </div><div class="line">System.getProperties().put(<span class="string">"http.proxyPassword"</span>, <span class="string">"somePassword"</span>);</div></pre></td></tr></table></figure>
+<h3 id="单实例Singleton-示例"><a href="#单实例Singleton-示例" class="headerlink" title="单实例Singleton 示例"></a>单实例Singleton 示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleSingleton</span> </span>&#123;  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SimpleSingleton singleInstance =  <span class="keyword">new</span> SimpleSingleton();  </div><div class="line"></div><div class="line">    <span class="comment">//Marking default constructor private  </span></div><div class="line">    <span class="comment">//to avoid direct instantiation.  </span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SimpleSingleton</span><span class="params">()</span> </span>&#123;  </div><div class="line">    &#125;  </div><div class="line"></div><div class="line">    <span class="comment">//Get instance for class SimpleSingleton  </span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SimpleSingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line"></div><div class="line">        <span class="keyword">return</span> singleInstance;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>亦或是<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> SimpleSingleton &#123;  </div><div class="line">    INSTANCE;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line"></div><div class="line"><span class="comment">//Call the method from Singleton:  </span></div><div class="line">SimpleSingleton.INSTANCE.doSomething();</div></pre></td></tr></table></figure></p>
+<h3 id="抓屏程序"><a href="#抓屏程序" class="headerlink" title="抓屏程序"></a>抓屏程序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.awt.Dimension;  </div><div class="line"><span class="keyword">import</span> java.awt.Rectangle;  </div><div class="line"><span class="keyword">import</span> java.awt.Robot;  </div><div class="line"><span class="keyword">import</span> java.awt.Toolkit;  </div><div class="line"><span class="keyword">import</span> java.awt.image.BufferedImage;  </div><div class="line"><span class="keyword">import</span> javax.imageio.ImageIO;  </div><div class="line"><span class="keyword">import</span> java.io.File;  </div><div class="line"></div><div class="line">...  </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">captureScreen</span><span class="params">(String fileName)</span> <span class="keyword">throws</span> Exception </span>&#123;  </div><div class="line"></div><div class="line">   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();  </div><div class="line">   Rectangle screenRectangle = <span class="keyword">new</span> Rectangle(screenSize);  </div><div class="line">   Robot robot = <span class="keyword">new</span> Robot();  </div><div class="line">   BufferedImage image = robot.createScreenCapture(screenRectangle);  </div><div class="line">   ImageIO.write(image, <span class="string">"png"</span>, <span class="keyword">new</span> File(fileName));  </div><div class="line"></div><div class="line">&#125;  </div><div class="line">...</div></pre></td></tr></table></figure>
+<h3 id="列出文件和目录"><a href="#列出文件和目录" class="headerlink" title="列出文件和目录"></a>列出文件和目录</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">File dir = <span class="keyword">new</span> File(<span class="string">"directoryName"</span>);  </div><div class="line">  String[] children = dir.list();  </div><div class="line">  <span class="keyword">if</span> (children == <span class="keyword">null</span>) &#123; <span class="comment">//在windows系统中C盘下有隐藏不可读文件</span></div><div class="line">      <span class="comment">// Either dir does not exist or is not a directory  </span></div><div class="line">  &#125; <span class="keyword">else</span> &#123;  </div><div class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; children.length; i++) &#123;  </div><div class="line">          <span class="comment">// Get filename of file or directory  </span></div><div class="line">          String filename = children[i];  </div><div class="line">      &#125;  </div><div class="line">  &#125;  </div><div class="line"></div><div class="line">  <span class="comment">// It is also possible to filter the list of returned files.  </span></div><div class="line">  <span class="comment">// This example does not return any files that start with `.'.  </span></div><div class="line">  FilenameFilter filter = <span class="keyword">new</span> FilenameFilter() &#123;  </div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">accept</span><span class="params">(File dir, String name)</span> </span>&#123;  </div><div class="line">          <span class="keyword">return</span> !name.startsWith(<span class="string">"."</span>);  </div><div class="line">      &#125;  </div><div class="line">  &#125;;  </div><div class="line">  children = dir.list(filter);  </div><div class="line"></div><div class="line">  <span class="comment">// The list of files can also be retrieved as File objects  </span></div><div class="line">  File[] files = dir.listFiles();  </div><div class="line"></div><div class="line">  <span class="comment">// This filter only returns directories  </span></div><div class="line">  FileFilter fileFilter = <span class="keyword">new</span> FileFilter() &#123;  </div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">accept</span><span class="params">(File file)</span> </span>&#123;  </div><div class="line">          <span class="keyword">return</span> file.isDirectory();  </div><div class="line">      &#125;  </div><div class="line">  &#125;;  </div><div class="line">  files = dir.listFiles(fileFilter);</div></pre></td></tr></table></figure>
+<h3 id="创建ZIP和JAR文件"><a href="#创建ZIP和JAR文件" class="headerlink" title="创建ZIP和JAR文件"></a>创建ZIP和JAR文件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.zip.*;  </div><div class="line"><span class="keyword">import</span> java.io.*;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZipIt</span> </span>&#123;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;  </div><div class="line">        <span class="keyword">if</span> (args.length &lt; <span class="number">2</span>) &#123;  </div><div class="line">            System.err.println(<span class="string">"usage: java ZipIt Zip.zip file1 file2 file3"</span>);  </div><div class="line">            System.exit(-<span class="number">1</span>);  </div><div class="line">        &#125;  </div><div class="line">        File zipFile = <span class="keyword">new</span> File(args[<span class="number">0</span>]);  </div><div class="line">        <span class="keyword">if</span> (zipFile.exists()) &#123;  </div><div class="line">            System.err.println(<span class="string">"Zip file already exists, please try another"</span>);  </div><div class="line">            System.exit(-<span class="number">2</span>);  </div><div class="line">        &#125;  </div><div class="line">        FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(zipFile);  </div><div class="line">        ZipOutputStream zos = <span class="keyword">new</span> ZipOutputStream(fos);  </div><div class="line">        <span class="keyword">int</span> bytesRead;  </div><div class="line">        <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];  </div><div class="line">        CRC32 crc = <span class="keyword">new</span> CRC32();  </div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>, n=args.length; i &lt; n; i++) &#123;  </div><div class="line">            String name = args[i];  </div><div class="line">            File file = <span class="keyword">new</span> File(name);  </div><div class="line">            <span class="keyword">if</span> (!file.exists()) &#123;  </div><div class="line">                System.err.println(<span class="string">"Skipping: "</span> + name);  </div><div class="line">                <span class="keyword">continue</span>;  </div><div class="line">            &#125;  </div><div class="line">            BufferedInputStream bis = <span class="keyword">new</span> BufferedInputStream(  </div><div class="line">                <span class="keyword">new</span> FileInputStream(file));  </div><div class="line">            crc.reset();  </div><div class="line">            <span class="keyword">while</span> ((bytesRead = bis.read(buffer)) != -<span class="number">1</span>) &#123;  </div><div class="line">                crc.update(buffer, <span class="number">0</span>, bytesRead);  </div><div class="line">            &#125;  </div><div class="line">            bis.close();  </div><div class="line">            <span class="comment">// Reset to beginning of input stream  </span></div><div class="line">            bis = <span class="keyword">new</span> BufferedInputStream(  </div><div class="line">                <span class="keyword">new</span> FileInputStream(file));  </div><div class="line">            ZipEntry entry = <span class="keyword">new</span> ZipEntry(name);  </div><div class="line">            entry.setMethod(ZipEntry.STORED);  </div><div class="line">            entry.setCompressedSize(file.length());  </div><div class="line">            entry.setSize(file.length());  </div><div class="line">            entry.setCrc(crc.getValue());  </div><div class="line">            zos.putNextEntry(entry);  </div><div class="line">            <span class="keyword">while</span> ((bytesRead = bis.read(buffer)) != -<span class="number">1</span>) &#123;  </div><div class="line">                zos.write(buffer, <span class="number">0</span>, bytesRead);  </div><div class="line">            &#125;  </div><div class="line">            bis.close();  </div><div class="line">        &#125;  </div><div class="line">        zos.close();  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="解析-读取XML-文件"><a href="#解析-读取XML-文件" class="headerlink" title="解析/读取XML 文件"></a>解析/读取XML 文件</h3><p>XML文件<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0"?&gt; </div><div class="line">&lt;students&gt; </div><div class="line">    &lt;student&gt; </div><div class="line">        &lt;name&gt;John&lt;/name&gt; </div><div class="line">        &lt;grade&gt;B&lt;/grade&gt; </div><div class="line">        &lt;age&gt;12&lt;/age&gt; </div><div class="line">    &lt;/student&gt; </div><div class="line">    &lt;student&gt; </div><div class="line">        &lt;name&gt;Mary&lt;/name&gt; </div><div class="line">        &lt;grade&gt;A&lt;/grade&gt; </div><div class="line">        &lt;age&gt;11&lt;/age&gt; </div><div class="line">    &lt;/student&gt; </div><div class="line">    &lt;student&gt; </div><div class="line">        &lt;name&gt;Simon&lt;/name&gt; </div><div class="line">        &lt;grade&gt;A&lt;/grade&gt; </div><div class="line">        &lt;age&gt;18&lt;/age&gt; </div><div class="line">    &lt;/student&gt; </div><div class="line">&lt;/students&gt;</div></pre></td></tr></table></figure></p>
+<p>java代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> net.viralpatel.java.xmlparser;  </div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.File;  </div><div class="line"><span class="keyword">import</span> javax.xml.parsers.DocumentBuilder;  </div><div class="line"><span class="keyword">import</span> javax.xml.parsers.DocumentBuilderFactory;  </div><div class="line"></div><div class="line"><span class="keyword">import</span> org.w3c.dom.Document;  </div><div class="line"><span class="keyword">import</span> org.w3c.dom.Element;  </div><div class="line"><span class="keyword">import</span> org.w3c.dom.Node;  </div><div class="line"><span class="keyword">import</span> org.w3c.dom.NodeList;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">XMLParser</span> </span>&#123;  </div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getAllUserNames</span><span class="params">(String fileName)</span> </span>&#123;  </div><div class="line">        <span class="keyword">try</span> &#123;  </div><div class="line">            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();  </div><div class="line">            DocumentBuilder db = dbf.newDocumentBuilder();  </div><div class="line">            File file = <span class="keyword">new</span> File(fileName);  </div><div class="line">            <span class="keyword">if</span> (file.exists()) &#123;  </div><div class="line">                Document doc = db.parse(file);  </div><div class="line">                Element docEle = doc.getDocumentElement();  </div><div class="line"></div><div class="line">                <span class="comment">// Print root element of the document  </span></div><div class="line">                System.out.println(<span class="string">"Root element of the document: "</span> </div><div class="line">                        + docEle.getNodeName());  </div><div class="line"></div><div class="line">                NodeList studentList = docEle.getElementsByTagName(<span class="string">"student"</span>);  </div><div class="line"></div><div class="line">                <span class="comment">// Print total student elements in document  </span></div><div class="line">                System.out  </div><div class="line">                        .println(<span class="string">"Total students: "</span> + studentList.getLength());  </div><div class="line"></div><div class="line">                <span class="keyword">if</span> (studentList != <span class="keyword">null</span> &amp;&amp; studentList.getLength() &gt; <span class="number">0</span>) &#123;  </div><div class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; studentList.getLength(); i++) &#123;  </div><div class="line"></div><div class="line">                        Node node = studentList.item(i);  </div><div class="line"></div><div class="line">                        <span class="keyword">if</span> (node.getNodeType() == Node.ELEMENT_NODE) &#123;  </div><div class="line"></div><div class="line">                            System.out  </div><div class="line">                                    .println(<span class="string">"====================="</span>);  </div><div class="line"></div><div class="line">                            Element e = (Element) node;  </div><div class="line">                            NodeList nodeList = e.getElementsByTagName(<span class="string">"name"</span>);  </div><div class="line">                            System.out.println(<span class="string">"Name: "</span> </div><div class="line">                                    + nodeList.item(<span class="number">0</span>).getChildNodes().item(<span class="number">0</span>)  </div><div class="line">                                            .getNodeValue());  </div><div class="line"></div><div class="line">                            nodeList = e.getElementsByTagName(<span class="string">"grade"</span>);  </div><div class="line">                            System.out.println(<span class="string">"Grade: "</span> </div><div class="line">                                    + nodeList.item(<span class="number">0</span>).getChildNodes().item(<span class="number">0</span>)  </div><div class="line">                                            .getNodeValue());  </div><div class="line"></div><div class="line">                            nodeList = e.getElementsByTagName(<span class="string">"age"</span>);  </div><div class="line">                            System.out.println(<span class="string">"Age: "</span> </div><div class="line">                                    + nodeList.item(<span class="number">0</span>).getChildNodes().item(<span class="number">0</span>)  </div><div class="line">                                            .getNodeValue());  </div><div class="line">                        &#125;  </div><div class="line">                    &#125;  </div><div class="line">                &#125; <span class="keyword">else</span> &#123;  </div><div class="line">                    System.exit(<span class="number">1</span>);  </div><div class="line">                &#125;  </div><div class="line">            &#125;  </div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;  </div><div class="line">            System.out.println(e);  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </div><div class="line"></div><div class="line">        XMLParser parser = <span class="keyword">new</span> XMLParser();  </div><div class="line">        parser.getAllUserNames(<span class="string">"c:\\test.xml"</span>);  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="把-Array-转换成-Map"><a href="#把-Array-转换成-Map" class="headerlink" title="把 Array 转换成 Map"></a>把 Array 转换成 Map</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Map;  </div><div class="line"><span class="keyword">import</span> org.apache.commons.lang.ArrayUtils;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;  </div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </div><div class="line">    String[][] countries = &#123; &#123; <span class="string">"United States"</span>, <span class="string">"New York"</span> &#125;, &#123; <span class="string">"United Kingdom"</span>, <span class="string">"London"</span> &#125;,  </div><div class="line">        &#123; <span class="string">"Netherland"</span>, <span class="string">"Amsterdam"</span> &#125;, &#123; <span class="string">"Japan"</span>, <span class="string">"Tokyo"</span> &#125;, &#123; <span class="string">"France"</span>, <span class="string">"Paris"</span> &#125; &#125;;  </div><div class="line"></div><div class="line">    Map countryCapitals = ArrayUtils.toMap(countries);  </div><div class="line"></div><div class="line">    System.out.println(<span class="string">"Capital of Japan is "</span> + countryCapitals.get(<span class="string">"Japan"</span>));  </div><div class="line">    System.out.println(<span class="string">"Capital of France is "</span> + countryCapitals.get(<span class="string">"France"</span>));  </div><div class="line">  &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> javax.mail.*;  </div><div class="line"><span class="keyword">import</span> javax.mail.internet.*;  </div><div class="line"><span class="keyword">import</span> java.util.*;  </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postMail</span><span class="params">( String recipients[ ], String subject, String message , String from)</span> <span class="keyword">throws</span> MessagingException  </span></div><div class="line">&#123;  </div><div class="line">    <span class="keyword">boolean</span> debug = <span class="keyword">false</span>;  </div><div class="line"></div><div class="line">     <span class="comment">//Set the host smtp address  </span></div><div class="line">     Properties props = <span class="keyword">new</span> Properties();  </div><div class="line">     props.put(<span class="string">"mail.smtp.host"</span>, <span class="string">"smtp.example.com"</span>);  </div><div class="line"></div><div class="line">    <span class="comment">// create some properties and get the default Session  </span></div><div class="line">    Session session = Session.getDefaultInstance(props, <span class="keyword">null</span>);  </div><div class="line">    session.setDebug(debug);  </div><div class="line"></div><div class="line">    <span class="comment">// create a message  </span></div><div class="line">    Message msg = <span class="keyword">new</span> MimeMessage(session);  </div><div class="line"></div><div class="line">    <span class="comment">// set the from and to address  </span></div><div class="line">    InternetAddress addressFrom = <span class="keyword">new</span> InternetAddress(from);  </div><div class="line">    msg.setFrom(addressFrom);  </div><div class="line"></div><div class="line">    InternetAddress[] addressTo = <span class="keyword">new</span> InternetAddress[recipients.length];  </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; recipients.length; i++)  </div><div class="line">    &#123;  </div><div class="line">        addressTo[i] = <span class="keyword">new</span> InternetAddress(recipients[i]);  </div><div class="line">    &#125;  </div><div class="line">    msg.setRecipients(Message.RecipientType.TO, addressTo);  </div><div class="line"></div><div class="line">    <span class="comment">// Optional : You can also set your custom headers in the Email if you Want  </span></div><div class="line">    msg.addHeader(<span class="string">"MyHeaderName"</span>, <span class="string">"myHeaderValue"</span>);  </div><div class="line"></div><div class="line">    <span class="comment">// Setting the Subject and Content Type  </span></div><div class="line">    msg.setSubject(subject);  </div><div class="line">    msg.setContent(message, <span class="string">"text/plain"</span>);  </div><div class="line">    Transport.send(msg);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="发送代数据的HTTP-请求"><a href="#发送代数据的HTTP-请求" class="headerlink" title="发送代数据的HTTP 请求"></a>发送代数据的HTTP 请求</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.BufferedReader;  </div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;  </div><div class="line"><span class="keyword">import</span> java.net.URL;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span>&#123;  </div><div class="line">        <span class="keyword">try</span> &#123;  </div><div class="line">            URL my_url = <span class="keyword">new</span> URL(<span class="string">"http://coolshell.cn/"</span>);  </div><div class="line">            BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(my_url.openStream()));  </div><div class="line">            String strTemp = <span class="string">""</span>;  </div><div class="line">            <span class="keyword">while</span>(<span class="keyword">null</span> != (strTemp = br.readLine()))&#123;  </div><div class="line">            System.out.println(strTemp);  </div><div class="line">        &#125;  </div><div class="line">        &#125; <span class="keyword">catch</span> (Exception ex) &#123;  </div><div class="line">            ex.printStackTrace();  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="改变数组的大小"><a href="#改变数组的大小" class="headerlink" title="改变数组的大小"></a>改变数组的大小</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** </span></div><div class="line">* Reallocates an array with a new size, and copies the contents </div><div class="line">* of the old array to the new array. </div><div class="line">* <span class="doctag">@param</span> oldArray  the old array, to be reallocated. </div><div class="line">* <span class="doctag">@param</span> newSize   the new array size. </div><div class="line">* <span class="doctag">@return</span>          A new array with the same contents. </div><div class="line">*/ </div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Object <span class="title">resizeArray</span> <span class="params">(Object oldArray, <span class="keyword">int</span> newSize)</span> </span>&#123;  </div><div class="line">   <span class="keyword">int</span> oldSize = java.lang.reflect.Array.getLength(oldArray);  </div><div class="line">   Class elementType = oldArray.getClass().getComponentType();  </div><div class="line">   Object newArray = java.lang.reflect.Array.newInstance(  </div><div class="line">         elementType,newSize);  </div><div class="line">   <span class="keyword">int</span> preserveLength = Math.min(oldSize,newSize);  </div><div class="line">   <span class="keyword">if</span> (preserveLength &gt; <span class="number">0</span>)  </div><div class="line">      System.arraycopy (oldArray,<span class="number">0</span>,newArray,<span class="number">0</span>,preserveLength);  </div><div class="line">   <span class="keyword">return</span> newArray;  </div><div class="line">&#125;  </div><div class="line"></div><div class="line"><span class="comment">// Test routine for resizeArray().  </span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;  </div><div class="line">   <span class="keyword">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;  </div><div class="line">   a = (<span class="keyword">int</span>[])resizeArray(a,<span class="number">5</span>);  </div><div class="line">   a[<span class="number">3</span>] = <span class="number">4</span>;  </div><div class="line">   a[<span class="number">4</span>] = <span class="number">5</span>;  </div><div class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;a.length; i++)  </div><div class="line">      System.out.println (a[i]); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
 
       
@@ -190,469 +242,96 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/07/java片段/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://aschouas.com/2017/07/07/java片段/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-Java并发之synchronized实现原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/06/Java并发之synchronized实现原理/">Java并发之synchronized实现原理</a>
-    </h1>
   
-
-        
-        <a href="/2017/06/06/Java并发之synchronized实现原理/" class="archive-article-date">
-  	<time datetime="2017-06-06T02:43:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">难受</blockquote>
-
-<p><em>转自<a href="http://blog.csdn.net/javazejian/article/details/72828483#comments?ref=myread" target="_blank" rel="external">http://blog.csdn.net/javazejian/article/details/72828483#comments?ref=myread</a></em></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JAVA/" class="article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/06/Java并发之synchronized实现原理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/06/06/Java并发之synchronized实现原理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java并发之synchronized实现原理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-懵逼的java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/26/懵逼的java/">懵逼的java</a>
-    </h1>
   
-
-        
-        <a href="/2017/05/26/懵逼的java/" class="archive-article-date">
-  	<time datetime="2017-05-26T07:39:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">周六要上班</blockquote>
-
-<p><em>今天在论坛看到一个很有意思的问题，自认为对java略有心得，但是按照以往的思维，做错了！</em><br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程/" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/26/懵逼的java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-java8新特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/24/java8新特性/">java8新特性</a>
-    </h1>
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://aschouas.com/2017/07/07/java片段/", 
+    sourceId: "java片段",
+    productKey: "731deb725063409d93f497085cf905e2",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        
-        <a href="/2017/05/24/java8新特性/" class="archive-article-date">
-  	<time datetime="2017-05-24T02:35:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">晚上吃水煮鱼</blockquote>
-
-<p><em>虽然java8出了很久了，自己也有在用，但是没有整理过，借此整理一下.</em></p>
-<h2 id="接口的默认方法"><a href="#接口的默认方法" class="headerlink" title="接口的默认方法"></a>接口的默认方法</h2><p>Java 8允许我们给接口添加一个非抽象的方法实现，只需要使用 default关键字即可，这个特征又叫做扩展方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Formula</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">double</span> <span class="title">calculate</span><span class="params">(<span class="keyword">int</span> a)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">double</span> <span class="title">sqrt</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> Math.sqrt(a);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JAVA/" class="article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/24/java8新特性/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Hexo搭建博客教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/17/Hexo搭建博客教程/">Hexo搭建博客教程</a>
-    </h1>
   
 
-        
-        <a href="/2017/05/17/Hexo搭建博客教程/" class="archive-article-date">
-  	<time datetime="2017-05-17T01:53:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">喜欢吃水蜜桃</blockquote>
-
-<p><em>以前用的博客都丢失了，真的好气啊，所以一直有想法搭建一个自己的博客。所以利用hexo+github搭建了本地博客,用于分享一些心得，记录一些有意思的事情。在这个过程中，遇到了很多问题，在此记录一些配置和遇到的问题。</em></p>
-<h2 id="Hexo搭建博客教程"><a href="#Hexo搭建博客教程" class="headerlink" title="Hexo搭建博客教程"></a>Hexo搭建博客教程</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
-<li><p>下载 node.js 并安装,默认安装 npm</p>
-</li>
-<li><p>下载安装 git，并与 github 关联,详情见上篇文章</p>
-</li>
-<li><p>下载安装 hexo，打开 cmd 运行 <code>npm install -g hexo</code></p>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程/" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/17/Hexo搭建博客教程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-git远程关联github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/16/git远程关联github/">Git远程关联github仓库</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/16/git远程关联github/" class="archive-article-date">
-  	<time datetime="2017-05-16T07:39:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">树欲静而风不止</blockquote>
-
-
-<h2 id="github远程关联本地git"><a href="#github远程关联本地git" class="headerlink" title="github远程关联本地git"></a>github远程关联本地git</h2><ul>
-<li><p>首先需要在本地安装git <a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></p>
-</li>
-<li><p>如果已经成功在本地安装git,又想在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步，那就需要用到SSH Key，github拿到了你的公钥就会知道内容是你推送的,前提是你要有github账号.</p>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程/" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/16/git远程关联github/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-我的第一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/我的第一篇文章/">有感</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/我的第一篇文章/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:45:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>天气真的不错</em></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">家中无房又无钱，生活本就艰</div><div class="line">谁知那小情侣，蛮横不讲理</div><div class="line">总秀恩爱朋友圈，还到空间发照片</div><div class="line">无缘无故我就被戳痛心间</div><div class="line">我婉转跟他来抱怨，惨被他羞辱要多读诗篇</div><div class="line">我劝告他们对狗要轻虐，反被他们牵手当着面</div><div class="line">嘲笑了一百遍！一百遍！</div><div class="line">最后无奈只能拉黑屏蔽换取清静空间</div><div class="line">没有那小情侣，生活乐无边</div><div class="line">狂吃到市前，散步在江边</div><div class="line">五杀虐泉感觉自己无法无天</div><div class="line">谁知那小情侣，实在太阴险</div><div class="line">得知此情形，竟拥吻在人前，欢声笑语又好似神仙</div><div class="line">幸得身体健，不然魂归天，徒留悲愤遗恨人间</div><div class="line">为求不见面，唯有加班加点独处办公间</div><div class="line">一边拼事业，一边寻姻缘</div><div class="line">发誓要让女友现，恩爱牵手去逛街</div><div class="line">从此我是好人记心间，期待神气虐狗的那一天。</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/今天没下雨/" class="article-tag-list-link color1">今天没下雨</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/我的第一篇文章/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -676,8 +355,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: undefined,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
