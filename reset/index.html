@@ -1,0 +1,791 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>It's My Demo</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <!-- <link rel="icon" type="image/png" href="assets/i/favicon.png"> -->
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+
+  <link rel="stylesheet" type="text/css" href="jquery-easyui-1.5.2/themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="jquery-easyui-1.5.2/themes/icon.css">
+
+
+</head>
+<body>
+
+<header data-am-widget="header" class="am-header am-header-default am-header-fixed">
+  <div class="am-header-left am-header-nav">
+    <a href="#" class="">
+      <i class="am-header-icon am-icon-home"></i>
+    </a>
+  </div>
+  <h1 class="am-header-title">
+    <a href="#title-link" id="navtitle">迪卡侬</a>
+  </h1>
+
+  <div class="am-header-right am-header-nav">
+      <a href="../login.html" class="">
+            切换账号
+            <!-- <i class="am-header-icon am-icon-bars"></i> -->
+          
+      </a>
+      <a id="forback" style="display: none;" href="total.html">返回</a>
+  </div>
+</header>
+
+
+
+
+<div id="previewtotal" class="easyui-tabs" style="height:auto;margin-top: 50px;">
+  <div id="storecode" title="门店" style="padding:10px;">
+
+
+          <div class="am-g" style="">
+                <span class="iconp">得分:91 排名:5<img src="public/img/th.jpg"></span>
+      <div class="am-u-sm-3">
+
+          <div>
+             <!-- <h3 style="text-align: center;font-size: 15px;">满意度综合排行</h3>-->
+              <!--<h1 style="text-align:center">得分:91 排名:5</h1>-->
+            
+          </div>
+          <div>
+            <div id="storetop10" style="width: 100%;height: 360px;"></div>
+            <br>  
+            <div id="countrystoretop10" style="width: 100%;height: 360px;"></div>
+          </div>
+            
+
+      </div>
+      <div class="am-u-sm-9">
+          <div class="am-g">
+            <div class="am-u-sm-4" style="margin-top: 1em;">
+              <table class="am-table am-table-bordered">
+                  <caption>Store Review</caption>
+                  <thead style="font-size: 12px;">
+                      <tr>
+                          <th></th>
+                          <th>本店</th>
+                          <th>区域平均</th>
+                          <th>全国平均</th>
+                      </tr>
+                  </thead>
+                  <tbody style="font-size: 11px;">
+                      <tr>
+                          <td>得分</td>
+                          <td>90</td>
+                          <td>92</td>
+                          <td>93</td>
+                      </tr>
+                      <tr>
+                          <td>评论数</td>
+                          <td>1,230</td>
+                          <td>1,920</td>
+                          <td>3,230</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+
+            </div>
+            <div class="am-u-sm-4" style="margin-top: 1em;">
+              <table class="am-table am-table-bordered">
+                  <caption>Till Review</caption>
+                  <thead style="font-size: 12px;">
+                      <tr>
+                          <th></th>
+                          <th>本店</th>
+                          <th>区域平均</th>
+                          <th>全国平均</th>
+                      </tr>
+                  </thead>
+                  <tbody style="font-size: 11px;">
+                      <tr>
+                          <td>得分</td>
+                          <td>91</td>
+                          <td>94</td>
+                          <td>96</td>
+                      </tr>
+                      <tr>
+                          <td>评论数</td>
+                          <td>1,129</td>
+                          <td>1,411</td>
+                          <td>3,123</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+            <div class="am-u-sm-4" style="margin-top: 1em;">
+              <table class="am-table am-table-bordered">
+                  <caption>Tell Review</caption>
+                  <thead style="font-size: 12px;">
+                      <tr>
+                          <th></th>
+                          <th>本店</th>
+                          <th>区域平均</th>
+                          <th>全国平均</th>
+                      </tr>
+                  </thead>
+                  <tbody style="font-size: 11px;">
+                      <tr>
+                          <td>得分</td>
+                          <td>96</td>
+                          <td>97</td>
+                          <td>91</td>
+                      </tr>
+                      <tr>
+                          <td>评论数</td>
+                          <td>1,405</td>
+                          <td>2,010</td>
+                          <td>6,120</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="am-g">
+            <div class="am-u-sm-4">
+               <div id="storecharts" style="width: 100%;height: 250px;"></div>
+            </div>
+            <div class="am-u-sm-4">
+              <div id="tillcharts" style="width: 100%;height: 250px;"></div>
+            </div>
+            <div class="am-u-sm-4">
+              <div id="tellcharts" style="width: 100%;height: 250px;"></div>
+            </div>
+          </div>
+
+            
+
+
+            <div class="easyui-tabs" id="tabsMain" data-options="tabWidth:150">  <!--tabWidth:300-->
+                <div title="不满意" style="padding:12px;overflow: hidden;" class=" tabs-cont-noborder">  
+
+
+                    <div class="am-g">
+                      <div class="am-u-sm-6" style="padding-left: 0;">
+                        <div id="wordunsatisfaction" style="width: 100%;height: 250px;"></div>
+                      </div>
+                      <div class="am-u-sm-6" style="margin-top: 1.5em;">
+                          <table id="produced" class="easyui-datagrid" title="产品详细" style="width:100%;height:250px"><!--style="width:700px;height:250px"-->
+                            <!--data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get'"> -->
+                              <thead data-options="frozen:true">
+                                  <tr>
+                                      <th data-options="field:'productkind'"></th>
+                                      <th data-options="field:'thisstore',width:50">本店</th>
+                                      <th data-options="field:'region',width:50">占比</th>
+                                      <th data-options="field:'country',width:50">总和</th>
+                                  </tr>
+                              </thead>
+                              <thead>
+                                  <tr>
+                                      <th data-options="field:'1m',width:40,align:'center'">1月</th>
+                                      <th data-options="field:'2m',width:40,align:'center'">2月</th>
+                                      <th data-options="field:'3m',width:40,align:'center'">3月</th>
+                                      <th data-options="field:'4m',width:40,align:'center'">4月</th>
+                                      <th data-options="field:'5m',width:40,align:'center'">5月</th>
+                                      <th data-options="field:'6m',width:40,align:'center'">6月</th>
+                                      <th data-options="field:'7m',width:40,align:'center'">7月</th>
+                                      <th data-options="field:'8m',width:40,align:'center'">8月</th>
+                                      <th data-options="field:'9m',width:40,align:'center'">9月</th>
+                                      <th data-options="field:'10m',width:40,align:'center'">10月</th>
+                                      <th data-options="field:'11m',width:40,align:'center'">11月</th>
+                                      <th data-options="field:'12m',width:40,align:'center'">12月</th>
+                                  </tr>
+                              </thead>
+                          </table>
+                      </div>
+                    </div>
+
+
+                </div>  
+                <div title="建议" style="padding:12px;overflow: hidden;">
+                    
+
+                  <div class="am-g">
+                    <div class="am-u-sm-6">
+                        <div id="wordsuggest" style="width: 100%;height: 250px;"></div>
+                    </div>
+                    <div class="am-u-sm-6" style="margin-top: 1.5em;">
+                        <table id="suggestid" class="easyui-datagrid" title="建议详细" style="width:100%;height:250px"><!--style="width:700px;height:250px"-->
+                          <!--data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get'"> -->
+                            <thead data-options="frozen:true">
+                                <tr>
+                                    <th data-options="field:'productkind'"></th>
+                                    <th data-options="field:'thisstore',width:50">本店</th>
+                                    <th data-options="field:'region',width:50">区域</th>
+                                    <th data-options="field:'country',width:50">全国</th>
+                                </tr>
+                            </thead>
+                            <thead>
+                                <tr>
+                                    <th data-options="field:'1m',width:40,align:'center'">1月</th>
+                                    <th data-options="field:'2m',width:40,align:'center'">2月</th>
+                                    <th data-options="field:'3m',width:40,align:'center'">3月</th>
+                                    <th data-options="field:'4m',width:40,align:'center'">4月</th>
+                                    <th data-options="field:'5m',width:40,align:'center'">5月</th>
+                                    <th data-options="field:'6m',width:40,align:'center'">6月</th>
+                                    <th data-options="field:'7m',width:40,align:'center'">7月</th>
+                                    <th data-options="field:'8m',width:40,align:'center'">8月</th>
+                                    <th data-options="field:'9m',width:40,align:'center'">9月</th>
+                                    <th data-options="field:'10m',width:40,align:'center'">10月</th>
+                                    <th data-options="field:'11m',width:40,align:'center'">11月</th>
+                                    <th data-options="field:'12m',width:40,align:'center'">12月</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                  </div>
+
+                </div>  
+                <div title="满意" style="padding: 12px;overflow: hidden;">  
+                      
+
+                      <div class="am-g">
+                        <div class="am-u-sm-6">
+                            <div id="wordsatisfaction" style="width: 100%;height: 250px;"></div>
+                        </div>
+                        <div class="am-u-sm-6" style="margin-top: 1.5em;">
+                            <table id="satisfactid" class="easyui-datagrid" title="建议详细" style="width:100%;height:250px"><!--style="width:700px;height:250px"-->
+                              <!--data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get'"> -->
+                                <thead data-options="frozen:true">
+                                    <tr>
+                                        <th data-options="field:'productkind'"></th>
+                                        <th data-options="field:'thisstore',width:50">本店</th>
+                                        <th data-options="field:'region',width:50">区域</th>
+                                        <th data-options="field:'country',width:50">全国</th>
+                                    </tr>
+                                </thead>
+                                <thead>
+                                    <tr>
+                                        <th data-options="field:'1m',width:40,align:'center'">1月</th>
+                                        <th data-options="field:'2m',width:40,align:'center'">2月</th>
+                                        <th data-options="field:'3m',width:40,align:'center'">3月</th>
+                                        <th data-options="field:'4m',width:40,align:'center'">4月</th>
+                                        <th data-options="field:'5m',width:40,align:'center'">5月</th>
+                                        <th data-options="field:'6m',width:40,align:'center'">6月</th>
+                                        <th data-options="field:'7m',width:40,align:'center'">7月</th>
+                                        <th data-options="field:'8m',width:40,align:'center'">8月</th>
+                                        <th data-options="field:'9m',width:40,align:'center'">9月</th>
+                                        <th data-options="field:'10m',width:40,align:'center'">10月</th>
+                                        <th data-options="field:'11m',width:40,align:'center'">11月</th>
+                                        <th data-options="field:'12m',width:40,align:'center'">12月</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                      </div>
+
+
+                </div>  
+            </div> 
+      </div>
+    </div>
+
+
+      
+  </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="echarts/echarts.min.js"></script>
+<script type="text/javascript" src="jquery-tmpl/jquery.tmpl.min.js"></script>
+
+<script type="text/javascript" src="jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+    
+$(function(){
+  var param=getQueryString("region")
+  if (param) {
+      $("#forback").show(param);
+      $("#navtitle").text();
+  } else {
+    console.log("正常进入");
+  }
+})  
+    
+function getQueryString(name) { 
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+  var r = window.location.search.substr(1).match(reg); 
+  if (r != null) return unescape(r[2]); return null; 
+}    
+    
+    
+  $(function(){
+    // var data = [{ ID: 0, title: "title"}];
+    // $("#templete").tmpl("").appendTo('#storecode');
+    //折线图
+    echartsinit("storecharts")
+    echartsinit("tillcharts")
+    echartsinit("tellcharts")
+
+    //综合排名tabs
+    previewtotaltabs()
+
+    //tabs
+    tabs()
+
+
+    //不满意
+    var data_unsatisfact=[3900, 3340, 3300, 2200, 2000, 1000, 520];
+    wordchartinit("wordunsatisfaction","不满意",data_unsatisfact);
+    // //建议
+    // var data_suggest=[100, 720, 1050, 340, 3200, 2300, 200];
+    // wordchartinit("wordsuggest","建议",data_suggest);
+    // //满意
+    // var data_satisfact=[1000, 220, 1250, 3240, 1200, 3300, 1200];
+    // wordchartinit("wordsatisfaction","满意",data_satisfact);
+
+
+
+    //加载不满意的数据
+    loadUnsatisfyData(0)
+    //建议
+    loadSuggestData(0)
+    // 满意
+    loadSatisfyData(0)
+
+
+    //TopK 区域门店满意度排行榜
+    var topStoreLabel=['浦东店','徐汇店','长宁店','宝山店','青浦店','奉贤店','金山店','杨浦店','普陀店','嘉定店'];
+    var topStoreDate=[71,78,80,88,91, 93, 94, 97, 98, 99];
+    var topStoreTitle="区域门店满意度排名Top10";
+    topK("storetop10",topStoreLabel,topStoreDate,topStoreTitle)
+    //TopK 全国门店满意度排行
+    var topCountryLabel=['西安店','上海1店','苏州店','南昌店','武汉店','成都店','太原店','青岛店','深圳2店','北京4店'];
+    var topCountryData=['76','80','82','85','90','93','95','96','97','98'];
+    var topCountryTitle="全国门店满意度排名Top10";
+    topK("countrystoretop10",topCountryLabel,topCountryData,topCountryTitle);
+
+});
+
+
+//得分折线图
+function echartsinit(divid){
+  var myChart=echarts.init(document.getElementById(divid));
+  // 指定图表的配置项和数据
+  var myOption= {
+      title: {
+          // text: 'Store Review对比'
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+          // data:['销量']
+          data:['本店','区域','全国'],
+          icon:'rect'
+      },
+      xAxis: {
+          // data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+          type: 'category',
+          boundaryGap: false,
+          data:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"]
+          
+      },
+      yAxis: {
+        type: 'value',
+        min:80,
+        max:100,
+        splitLine:{
+            show:false,
+            lineStyle:{
+                color:'#2e3547'
+            }
+        },  
+      },
+      series:[
+          {
+              name:'本店',
+              type:'line',
+              symbol:'circle',
+              symbolSize:1,
+              showAllSymbol:false,
+              smooth:true,
+              lineStyle: { //线条样式
+              normal: {
+                width: 1 
+                  }
+              },
+              data:[91, 92, 97, 99, 100, 91, 93,88,99,98,92,97]
+          },
+          {
+              name:'区域',
+              type:'line',
+              symbol:'circle',
+              symbolSize:1,
+              showAllSymbol:false,
+               smooth:true, 
+              lineStyle: { //线条样式
+              normal: {
+                width: 1 
+                  }
+              },
+              data:[97, 94, 91, 92, 95, 99, 91,99,91,91,98,99]
+          },
+          {
+              name:'全国',
+              type:'line',
+              symbol:'circle',
+              symbolSize:1,
+               smooth:true, 
+              showAllSymbol:false,
+              lineStyle: { //线条样式
+              normal: {
+                width: 1 
+                  }
+              },
+              data:[96, 99, 94, 94, 88, 95, 96,94,92,97,96,91]
+          }
+
+      ]
+  };
+  myChart.clear()
+  myChart.setOption(myOption);
+  window.addEventListener("resize",function(){
+    myChart.resize();
+  })
+};
+
+
+
+//初始化不满意||建议||满意
+function wordchartinit(divid,title,data){
+    var wordChart=echarts.init(document.getElementById(divid));
+    // 词频
+    var wordOption = {
+        color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        title: {
+            text: title
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                "axisLabel":{  
+                    interval: 0  
+                },
+                data : ['产品', '销售助理', '开店策略', '产品库存', '客服助理', '收银助理', '官网'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:title+'个数',
+                type:'bar',
+                barWidth: '60%',
+                data:data
+            }
+        ]
+    };
+  wordChart.clear()
+  wordChart.setOption(wordOption);
+  wordChart.on('click', function (params) {
+      // console.log(params.dataIndex);
+
+      switch(title){
+      case '不满意':
+        loadUnsatisfyData(params.dataIndex)
+        break;
+      case '建议':
+        loadSuggestData(params.dataIndex)
+        break;
+      case '满意':
+        loadSatisfyData(params.dataIndex)
+        break;
+      default:
+        console.log("暂时还没测试到这一步")
+      }
+
+      
+  });
+  
+  window.addEventListener("resize",function(){
+    wordChart.resize();
+  })
+  
+}
+
+
+//加载数据
+//加载不满意的数据
+function loadUnsatisfyData(index){
+
+
+  var obj0 = {"total":5,"rows":[  
+            {"productkind":"产品种类","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品库存","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品设计问题","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"配件","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品包装","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品上新","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+        ]}
+  var obj1 = {"total":5,"rows":[  
+            {"productkind":"服务态度","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"专业技能","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"人手不足","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"工作效率","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"收银与支付","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+        ]}
+
+  switch(index){
+  case 0:
+    $("#produced").datagrid({title:'产品信息'}); 
+    $('#produced').datagrid('loadData',obj0);
+    break;
+  case 1:
+    $("#produced").datagrid({title:'销售信息'}); 
+    $('#produced').datagrid('loadData',obj1);
+    break;
+  default:
+    console.log("暂时还没测试到这一步")
+  }
+  $('#produced').datagrid('reload');
+}
+
+//加载建议的数据
+function loadSuggestData(index){
+
+ var obj0 = {"total":5,"rows":[  
+            {"productkind":"产品种类","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品库存","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品设计问题","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"配件","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品包装","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品上新","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+        ]}
+  var obj1 = {"total":5,"rows":[  
+            {"productkind":"服务态度","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"专业技能","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"人手不足","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"工作效率","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"收银与支付","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+        ]}
+
+  switch(index){
+  case 0:
+    $("#suggestid").datagrid({title:'产品信息'}); 
+    $('#suggestid').datagrid('loadData',obj0);
+    break;
+  case 1:
+    $("#suggestid").datagrid({title:'销售信息'}); 
+    $('#suggestid').datagrid('loadData',obj1);
+    break;
+  default:
+    console.log("暂时还没测试到这一步")
+  }
+  $('#suggestid').datagrid('reload');
+}
+//加载满意的数据
+function loadSatisfyData(index){
+
+
+  var obj0 = {"total":5,"rows":[  
+            {"productkind":"产品种类","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品库存","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品设计问题","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"配件","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品包装","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品上新","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+        ]}
+  var obj1 = {"total":5,"rows":[  
+            {"productkind":"服务态度","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"专业技能","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"人手不足","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"工作效率","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"收银与支付","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+        ]}
+
+  switch(index){
+  case 0:
+    $("#satisfactid").datagrid({title:'产品信息'}); 
+    $('#satisfactid').datagrid('loadData',obj0);
+    break;
+  case 1:
+    $("#satisfactid").datagrid({title:'销售信息'}); 
+    $('#satisfactid').datagrid('loadData',obj1);
+    break;
+  default:
+    console.log("暂时还没测试到这一步")
+  }
+  $('#satisfactid').datagrid('reload');
+}
+
+//切换tabs
+function tabs(){
+  $('#tabsMain').tabs({      
+    border:true,      
+    onSelect:function(title,index){   
+          console.log(title+",index:"+index);
+
+          switch(index){
+          case 0:
+              var data_unsatisfact=[3900, 3340, 3300, 2200, 2000, 1000, 520];
+              wordchartinit("wordunsatisfaction",title,data_unsatisfact);
+            break;
+          case 1:
+              //建议
+              var data_suggest=[3200, 2300, 1050, 720, 340, 200, 100];
+              wordchartinit("wordsuggest",title,data_suggest);
+            break;
+          case 2:
+              //满意
+              var data_satisfact=[3300, 3240, 1250, 1200, 1200, 1000, 220];
+              wordchartinit("wordsatisfaction",title,data_satisfact);
+            break;
+          default:
+            console.log("暂时还没测试到这一步")
+          }
+
+
+    }      
+  });  
+}
+
+//总体排行
+function previewtotaltabs(){
+  $("#previewtotal").tabs({
+    border:false,
+    onSelect:function(title,index){
+      console.log(title+",index:"+index);
+
+      switch(index){
+          case 0:
+                // echartsinit("storechartsregion")
+                // echartsinit("tillchartsregion")
+                // echartsinit("tellchartsregion")
+            break;
+          case 1:
+              //建议
+                // echartsinit("storechartsregion")
+                // echartsinit("tillchartsregion")
+                // echartsinit("tellchartsregion")
+
+
+
+            break;
+          case 2:
+              //满意
+                // echartsinit("storechartsregion")
+                // echartsinit("tillchartsregion")
+                // echartsinit("tellchartsregion")
+            break;
+          default:
+            console.log("暂时还没测试到这一步")
+          }
+      
+    }
+  })
+}
+
+
+//区域门店满意度排名Top10
+function topK(divid,label,data,title){
+  var myChart=echarts.init(document.getElementById(divid));
+
+  var topoption = {
+      title: {
+          text: title
+          // subtext: ''
+      },
+      tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+              type: 'shadow'
+          }
+      },
+      legend: {
+          data: ['排名']
+      },
+      grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '5%',
+          containLabel: true
+      },
+      xAxis: {
+          type: 'value',
+          boundaryGap: [0, 0.01],
+          min:60,
+          max:100,
+           splitLine:{
+            show:false,
+            lineStyle:{
+                color:'#2e3547'
+            }
+        },
+      },
+      yAxis: {
+          type: 'category',
+          data: label
+      },
+      series: [
+          {
+              name: '分数',
+              type: 'bar',
+              barWidth: 10,//柱图宽度
+              data: data,
+              itemStyle:{
+                  normal:{
+                      color:"#0E90D2"
+                  }
+              }
+          }
+      ]
+  };
+  myChart.setOption(topoption);
+}
+</script>
+
+
+</body>
+</html>

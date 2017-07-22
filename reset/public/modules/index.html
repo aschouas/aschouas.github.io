@@ -1,0 +1,323 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>It's My Demo</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <!-- <link rel="icon" type="image/png" href="assets/i/favicon.png"> -->
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+
+  <link rel="stylesheet" type="text/css" href="jquery-easyui-1.5.2/themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="jquery-easyui-1.5.2/themes/icon.css">
+
+
+</head>
+<body>
+
+<header data-am-widget="header" class="am-header am-header-default am-header-fixed">
+  <div class="am-header-left am-header-nav">
+    <a href="#" class="">
+      <i class="am-header-icon am-icon-home"></i>
+    </a>
+  </div>
+  <h1 class="am-header-title">
+    <a href="#title-link">可视化Demo</a>
+  </h1>
+</header>
+
+
+
+
+<div id="previewtotal" class="easyui-tabs" style="height:auto;margin-top: 50px;">
+  <div title="门店" style="padding:10px;">
+      
+  
+    <div class="am-g" style="">
+      <div class="am-u-sm-3">
+
+          <div>
+              <h3 style="text-align: center;font-size: 15px;">满意度综合排行</h3>
+              <h2>91,排5</h2>
+          </div>
+          <div>
+            <div id="storetop10" style="width: 100%;height: 300px;"></div>
+            <div id="countrystoretop10" style="width: 100%;height: 300px;"></div>
+          </div>
+            
+
+      </div>
+      <div class="am-u-sm-9">
+          <div class="am-g">
+            <div class="am-u-sm-4" style="margin-top: 1em;">
+              <table class="am-table am-table-bordered">
+                  <caption>Store Review</caption>
+                  <thead style="font-size: 12px;">
+                      <tr>
+                          <th></th>
+                          <th>本店</th>
+                          <th>区域</th>
+                          <th>全国</th>
+                      </tr>
+                  </thead>
+                  <tbody style="font-size: 11px;">
+                      <tr>
+                          <td>得分</td>
+                          <td>90</td>
+                          <td>92</td>
+                          <td>93</td>
+                      </tr>
+                      <tr>
+                          <td>评论数</td>
+                          <td>1000</td>
+                          <td>2000</td>
+                          <td>3000</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+
+            </div>
+            <div class="am-u-sm-4" style="margin-top: 1em;">
+              <table class="am-table am-table-bordered">
+                  <caption>Till Review</caption>
+                  <thead style="font-size: 12px;">
+                      <tr>
+                          <th></th>
+                          <th>本店</th>
+                          <th>区域</th>
+                          <th>全国</th>
+                      </tr>
+                  </thead>
+                  <tbody style="font-size: 11px;">
+                      <tr>
+                          <td>得分</td>
+                          <td>90</td>
+                          <td>92</td>
+                          <td>93</td>
+                      </tr>
+                      <tr>
+                          <td>评论数</td>
+                          <td>1000</td>
+                          <td>2000</td>
+                          <td>3000</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+            <div class="am-u-sm-4" style="margin-top: 1em;">
+              <table class="am-table am-table-bordered">
+                  <caption>Tell Review</caption>
+                  <thead style="font-size: 12px;">
+                      <tr>
+                          <th></th>
+                          <th>本店</th>
+                          <th>区域</th>
+                          <th>全国</th>
+                      </tr>
+                  </thead>
+                  <tbody style="font-size: 11px;">
+                      <tr>
+                          <td>得分</td>
+                          <td>90</td>
+                          <td>92</td>
+                          <td>93</td>
+                      </tr>
+                      <tr>
+                          <td>评论数</td>
+                          <td>1000</td>
+                          <td>2000</td>
+                          <td>3000</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="am-g">
+            <div class="am-u-sm-4">
+               <div id="storecharts" style="width: 100%;height: 250px;"></div>
+            </div>
+            <div class="am-u-sm-4">
+              <div id="tillcharts" style="width: 100%;height: 250px;"></div>
+            </div>
+            <div class="am-u-sm-4">
+              <div id="tellcharts" style="width: 100%;height: 250px;"></div>
+            </div>
+          </div>
+
+            
+
+
+            <div class="easyui-tabs" id="tabsMain" data-options="tabWidth:150">  <!--tabWidth:300-->
+                <div title="不满意" style="padding-left: 10px;padding-left: 15px; overflow: hidden;" class=" tabs-cont-noborder">  
+
+
+                    <div class="am-g">
+                      <div class="am-u-sm-6" style="padding-left: 0;">
+                        <div id="wordunsatisfaction" style="width: 100%;height: 250px;"></div>
+                      </div>
+                      <div class="am-u-sm-6" style="margin-top: 1.5em;">
+                          <table id="produced" class="easyui-datagrid" title="产品详细" style="width:100%;height:250px"><!--style="width:700px;height:250px"-->
+                            <!--data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get'"> -->
+                              <thead data-options="frozen:true">
+                                  <tr>
+                                      <th data-options="field:'productkind',width:60">产品种类</th>
+                                      <th data-options="field:'thisstore',width:50">本店</th>
+                                      <th data-options="field:'region',width:50">区域</th>
+                                      <th data-options="field:'country',width:50">全国</th>
+                                  </tr>
+                              </thead>
+                              <thead>
+                                  <tr>
+                                      <th data-options="field:'1m',width:40,align:'center'">1月</th>
+                                      <th data-options="field:'2m',width:40,align:'center'">2月</th>
+                                      <th data-options="field:'3m',width:40,align:'center'">3月</th>
+                                      <th data-options="field:'4m',width:40,align:'center'">4月</th>
+                                      <th data-options="field:'5m',width:40,align:'center'">5月</th>
+                                      <th data-options="field:'6m',width:40,align:'center'">6月</th>
+                                      <th data-options="field:'7m',width:40,align:'center'">7月</th>
+                                      <th data-options="field:'8m',width:40,align:'center'">8月</th>
+                                      <th data-options="field:'9m',width:40,align:'center'">9月</th>
+                                      <th data-options="field:'10m',width:40,align:'center'">10月</th>
+                                      <th data-options="field:'11m',width:40,align:'center'">11月</th>
+                                      <th data-options="field:'12m',width:40,align:'center'">12月</th>
+                                  </tr>
+                              </thead>
+                          </table>
+                      </div>
+                    </div>
+
+
+                </div>  
+                <div title="建议" style="padding:10px;overflow: hidden;">
+                    
+
+                  <div class="am-g">
+                    <div class="am-u-sm-6">
+                        <div id="wordsuggest" style="width: 100%;height: 250px;"></div>
+                    </div>
+                    <div class="am-u-sm-6" style="margin-top: 1.5em;">
+                        <table id="suggestid" class="easyui-datagrid" title="建议详细" style="width:100%;height:250px"><!--style="width:700px;height:250px"-->
+                          <!--data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get'"> -->
+                            <thead data-options="frozen:true">
+                                <tr>
+                                    <th data-options="field:'productkind',width:60">产品种类</th>
+                                    <th data-options="field:'thisstore',width:50">本店</th>
+                                    <th data-options="field:'region',width:50">区域</th>
+                                    <th data-options="field:'country',width:50">全国</th>
+                                </tr>
+                            </thead>
+                            <thead>
+                                <tr>
+                                    <th data-options="field:'1m',width:40,align:'center'">1月</th>
+                                    <th data-options="field:'2m',width:40,align:'center'">2月</th>
+                                    <th data-options="field:'3m',width:40,align:'center'">3月</th>
+                                    <th data-options="field:'4m',width:40,align:'center'">4月</th>
+                                    <th data-options="field:'5m',width:40,align:'center'">5月</th>
+                                    <th data-options="field:'6m',width:40,align:'center'">6月</th>
+                                    <th data-options="field:'7m',width:40,align:'center'">7月</th>
+                                    <th data-options="field:'8m',width:40,align:'center'">8月</th>
+                                    <th data-options="field:'9m',width:40,align:'center'">9月</th>
+                                    <th data-options="field:'10m',width:40,align:'center'">10月</th>
+                                    <th data-options="field:'11m',width:40,align:'center'">11月</th>
+                                    <th data-options="field:'12m',width:40,align:'center'">12月</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                  </div>
+
+                </div>  
+                <div title="满意" style="padding: 10px;overflow: hidden;">  
+                      
+
+                      <div class="am-g">
+                        <div class="am-u-sm-6">
+                            <div id="wordsatisfaction" style="width: 100%;height: 250px;"></div>
+                        </div>
+                        <div class="am-u-sm-6" style="margin-top: 1.5em;">
+                            <table id="satisfactid" class="easyui-datagrid" title="建议详细" style="width:100%;height:250px"><!--style="width:700px;height:250px"-->
+                              <!--data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get'"> -->
+                                <thead data-options="frozen:true">
+                                    <tr>
+                                        <th data-options="field:'productkind',width:60">产品种类</th>
+                                        <th data-options="field:'thisstore',width:50">本店</th>
+                                        <th data-options="field:'region',width:50">区域</th>
+                                        <th data-options="field:'country',width:50">全国</th>
+                                    </tr>
+                                </thead>
+                                <thead>
+                                    <tr>
+                                        <th data-options="field:'1m',width:40,align:'center'">1月</th>
+                                        <th data-options="field:'2m',width:40,align:'center'">2月</th>
+                                        <th data-options="field:'3m',width:40,align:'center'">3月</th>
+                                        <th data-options="field:'4m',width:40,align:'center'">4月</th>
+                                        <th data-options="field:'5m',width:40,align:'center'">5月</th>
+                                        <th data-options="field:'6m',width:40,align:'center'">6月</th>
+                                        <th data-options="field:'7m',width:40,align:'center'">7月</th>
+                                        <th data-options="field:'8m',width:40,align:'center'">8月</th>
+                                        <th data-options="field:'9m',width:40,align:'center'">9月</th>
+                                        <th data-options="field:'10m',width:40,align:'center'">10月</th>
+                                        <th data-options="field:'11m',width:40,align:'center'">11月</th>
+                                        <th data-options="field:'12m',width:40,align:'center'">12月</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                      </div>
+
+
+                </div>  
+            </div> 
+           
+
+
+          
+      </div>
+    </div>
+
+
+
+
+</div>
+  <div title="区域" style="padding:10px">
+      我是区域
+  </div> 
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="echarts/echarts.min.js"></script>
+<script type="text/javascript" src="jquery-tmpl/jquery.tmpl.min.js"></script>
+
+<script type="text/javascript" src="jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="public/js/app.js"></script>
+</body>
+</html>
