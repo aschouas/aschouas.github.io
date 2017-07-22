@@ -72,7 +72,7 @@
 
 
           <div class="am-g" style="">
-                <span class="iconp">得分:91 排名:5<img src="public/img/th.jpg"></span>
+                <span class="iconp">得分:91 排名:1<img src="public/img/th.jpg"></span>
       <div class="am-u-sm-3">
 
           <div>
@@ -165,10 +165,10 @@
                           <td>91</td>
                       </tr>
                       <tr>
-                          <td>评论数</td>
-                          <td>1,405</td>
-                          <td>2,010</td>
-                          <td>6,120</td>
+                          <td>投诉数</td>
+                          <td>1.6</td>
+                          <td>1</td>
+                          <td>1.1</td>
                       </tr>
                   </tbody>
               </table>
@@ -483,6 +483,7 @@ function echartsinit(divid){
 //初始化不满意||建议||满意
 function wordchartinit(divid,title,data){
     var wordChart=echarts.init(document.getElementById(divid));
+     var myColor=['#D53A35','#D53A35','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2'];
     // 词频
     var wordOption = {
         color: ['#3398DB'],
@@ -523,7 +524,16 @@ function wordchartinit(divid,title,data){
                 name:title+'个数',
                 type:'bar',
                 barWidth: '60%',
-                data:data
+                data:data,
+                itemStyle: {
+                normal: {
+                	// callback,设定每一bar颜色,配置项color顶axis一组bars颜色
+                    color: function(params) {
+                        var num=myColor.length;
+                        return myColor[params.dataIndex%num]
+                    }
+                }
+	   		}
             }
         ]
     };
@@ -562,19 +572,23 @@ function loadUnsatisfyData(index){
 
 
   var obj0 = {"total":5,"rows":[  
-            {"productkind":"产品种类","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品库存","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品设计问题","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"配件","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品包装","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品上新","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+            {"productkind":"产品种类","thisstore":23,"region":'12%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}, 
+            {"productkind":"产品库存","thisstore":23,"region":'8%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品设计问题","thisstore":34,"region":'5%',"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品说明","thisstore":12,"region":'8%',"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品质量","thisstore":22,"region":'17%',"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品价格/性价比","thisstore":33,"region":'15%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"配件","thisstore":33,"region":'20%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品包装","thisstore":33,"region":'21%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品上新","thisstore":33,"region":'4%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+      
         ]}
   var obj1 = {"total":5,"rows":[  
-            {"productkind":"服务态度","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"专业技能","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"人手不足","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"工作效率","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"收银与支付","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+            {"productkind":"服务态度","thisstore":23,"region":'31%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"专业技能","thisstore":34,"region":'29%',"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"人手不足","thisstore":12,"region":'10%',"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"工作效率","thisstore":22,"region":'12%',"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"收银与支付","thisstore":33,"region":'18%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
         ]}
 
   switch(index){
@@ -596,21 +610,24 @@ function loadUnsatisfyData(index){
 function loadSuggestData(index){
 
  var obj0 = {"total":5,"rows":[  
-            {"productkind":"产品种类","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品库存","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品设计问题","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"配件","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品包装","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品上新","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+            {"productkind":"产品种类","thisstore":23,"region":'12%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}, 
+            {"productkind":"产品库存","thisstore":23,"region":'8%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品设计问题","thisstore":34,"region":'5%',"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品说明","thisstore":12,"region":'8%',"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品质量","thisstore":22,"region":'17%',"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品价格/性价比","thisstore":33,"region":'15%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"配件","thisstore":33,"region":'20%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品包装","thisstore":33,"region":'21%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品上新","thisstore":33,"region":'4%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+      
         ]}
   var obj1 = {"total":5,"rows":[  
-            {"productkind":"服务态度","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"专业技能","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"人手不足","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"工作效率","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"收银与支付","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+            {"productkind":"服务态度","thisstore":23,"region":'31%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"专业技能","thisstore":34,"region":'29%',"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"人手不足","thisstore":12,"region":'10%',"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"工作效率","thisstore":22,"region":'12%',"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"收银与支付","thisstore":33,"region":'18%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
         ]}
-
   switch(index){
   case 0:
     $("#suggestid").datagrid({title:'产品信息'}); 
@@ -630,21 +647,24 @@ function loadSatisfyData(index){
 
 
   var obj0 = {"total":5,"rows":[  
-            {"productkind":"产品种类","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品库存","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品设计问题","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"配件","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品包装","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"产品上新","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+            {"productkind":"产品种类","thisstore":23,"region":'12%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}, 
+            {"productkind":"产品库存","thisstore":23,"region":'8%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品设计问题","thisstore":34,"region":'5%',"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品说明","thisstore":12,"region":'8%',"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品质量","thisstore":22,"region":'17%',"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品价格/性价比","thisstore":33,"region":'15%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"配件","thisstore":33,"region":'20%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品包装","thisstore":33,"region":'21%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品上新","thisstore":33,"region":'4%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+      
         ]}
   var obj1 = {"total":5,"rows":[  
-            {"productkind":"服务态度","thisstore":23,"region":10,"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"专业技能","thisstore":34,"region":12,"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"人手不足","thisstore":12,"region":12,"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"工作效率","thisstore":22,"region":12,"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
-            {"productkind":"收银与支付","thisstore":33,"region":12,"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+            {"productkind":"服务态度","thisstore":23,"region":'31%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"专业技能","thisstore":34,"region":'29%',"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"人手不足","thisstore":12,"region":'10%',"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"工作效率","thisstore":22,"region":'12%',"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"收银与支付","thisstore":33,"region":'18%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
         ]}
-
   switch(index){
   case 0:
     $("#satisfactid").datagrid({title:'产品信息'}); 
