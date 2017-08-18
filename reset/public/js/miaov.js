@@ -219,13 +219,27 @@ function doPosition()
 		aA[i].style.left=mcList[i].cx+l-mcList[i].offsetWidth/2+'px';
 		aA[i].style.top=mcList[i].cy+t-mcList[i].offsetHeight/2+'px';
 		
+        
+        //demo??
 		
+        
 		if(i%2==0){
-			aA[i].style.fontSize=Math.ceil(12*mcList[i].scale/2)+18+'px';
+			aA[i].style.fontSize=Math.ceil(12*mcList[i].scale/2)+12+'px';
 		}else{
 			aA[i].style.fontSize=Math.ceil(12*mcList[i].scale/2)+8+'px';
 		}
-		
+        
+		if(i==1){
+           aA[i].style.fontSize=Math.ceil(12*mcList[i].scale/2)+20+'px';
+        }
+        
+        if(i==2){
+           aA[i].style.fontSize=Math.ceil(12*mcList[i].scale/2)+28+'px';
+        }
+        
+        if(i==3){
+           aA[i].style.fontSize=Math.ceil(12*mcList[i].scale/2)+18+'px';
+        }
 		
 		aA[i].style.filter="alpha(opacity="+100*mcList[i].alpha+")";
 		aA[i].style.opacity=mcList[i].alpha;
