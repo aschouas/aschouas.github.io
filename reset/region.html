@@ -39,6 +39,7 @@
 
   <link rel="stylesheet" type="text/css" href="jquery-easyui-1.5.2/themes/default/easyui.css">
   <link rel="stylesheet" type="text/css" href="jquery-easyui-1.5.2/themes/icon.css">
+  <link rel="stylesheet" type="text/css" href="public/css/miaov_style.css">
 
 
 </head>
@@ -65,13 +66,14 @@
 
 
 
-<div id="previewtotal" class="easyui-tabs" style="height:auto;margin-top: 50px;">
+<!--<div id="previewtotal" class="easyui-tabs" style="height:auto;margin-top: 50px;">-->
   <!--<div id="storecode" title="门店" style="padding:10px;">
 
   </div>-->
   <div id="regioncode" title="区域" style="padding:10px" data-options="selected:true">
         <div class="am-g" style="">
-             <span class="iconp">综合得分:97 排名:2<img src="public/img/th.jpg"></span>      
+             <span class="iconp">综合得分:97 排名:2<img src="public/img/th.jpg"></span>
+             <span style="font-size: 16px;">Till Review 低于平均水平</span>
             <div class="am-u-sm-3">
                 <br>
                 <div>
@@ -308,15 +310,41 @@
                   </div> 
             </div>
           </div>
-
-
   </div> 
-</div>
+    
+          <div class="am-modal am-modal-alert" tabindex="-1" id="my-alert">
+          <div class="am-modal-dialog" style="background-color:black;opacity: 0.82">
+            <div id="div1">
+                <a href="https://cn.bing.com/" style="font-size:12px;" target="_blank">种类不齐全</a>
+                <a href="https://cn.bing.com/" class="red" target="_blank">缺货</a>
+                <a href="https://cn.bing.com/" target="_blank">demo1</a>
+                <a href="https://cn.bing.com/" target="_blank">demo2</a>
+                <a href="https://cn.bing.com/" class="blue" target="_blank">demo3</a>
+                <a href="https://cn.bing.com/" target="_blank">demo4</a>
+                <a href="https://cn.bing.com/" class="red" target="_blank">demo5</a>
+                <a href="https://cn.bing.com/" class="yellow" target="_blank">demo6</a>
+                <a href="https://cn.bing.com/" target="_blank">demo7</a>
+                <a href="https://cn.bing.com/" class="red" target="_blank">demo8</a>
+                <a href="https://cn.bing.com/" target="_blank">demo9</a>
+                <a href="https://cn.bing.com/" class="blue" target="_blank">demo10</a>
+                <a href="https://cn.bing.com/" target="_blank">demo11</a>
+                <a href="https://cn.bing.com/" class="red" target="_blank">demo12</a>
+                <a href="https://cn.bing.com/" class="blue" target="_blank">demo13</a>
+                <a href="https://cn.bing.com/" target="_blank">demo14</a>
+                <a href="https://cn.bing.com/" class="blue" target="_blank">deo15</a>
+            </div>
+          </div>
+        </div>
+    
+    
+<!--</div>-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
 <script type="text/javascript" src="echarts/echarts.min.js"></script>
 <script type="text/javascript" src="jquery-tmpl/jquery.tmpl.min.js"></script>
 
 <script type="text/javascript" src="jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="public/js/miaov.js"></script>    
 <script type="text/javascript">
 $(function(){
   var param=getQueryString("region")
@@ -598,7 +626,29 @@ function echartsinit(divid,infos){
                 width: 1.5
                   }
               },
-              data:infos[0]
+              data:infos[0],
+                markLine : {
+                label:{
+	            		normal:{
+	            			show:true,
+	            			position:'',
+	            			formatter:''
+	            		}
+	            	},
+            	lineStyle:{
+            		normal:{
+            			color:'red'
+            		}
+            	},
+            	symbol:'none',
+                silent:'true',
+                data : [
+                    {
+                        name: '标准值',
+                        yAxis: 95
+                    },
+                ]
+            }
           },
           {
               name:'全国',
@@ -860,6 +910,28 @@ function wordchartinit(divid,title,data){
   })
   
 }  
+    
+    
+/*词云*/ 
+ $('#produced').datagrid({
+	onDblClickRow: function(index,field,value){
+		$('#my-alert').modal('open')
+      
+	}
+});
+     $('#suggestid').datagrid({
+	onDblClickRow: function(index,field,value){
+		$('#my-alert').modal('open')
+      
+	}
+});
+     $('#satisfactid').datagrid({
+	onDblClickRow: function(index,field,value){
+		$('#my-alert').modal('open')
+      
+	}
+});
+        
     
 </script>
 
