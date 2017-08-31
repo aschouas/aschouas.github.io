@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://aschouas.com">
-  <title>白橡树</title>
+  <title>HttpURLConnection中文地址请求乱码 | 白橡树</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="擅长吹牛，放治疗术">
-<meta name="keywords" content="前端,Python，java，html5，开发者，j2ee,极客,Developer,Geek,html,css,css3,mysql">
-<meta property="og:type" content="website">
-<meta property="og:title" content="白橡树">
-<meta property="og:url" content="http://aschouas.com/index.html">
+  <meta name="description" content="天气终于不热了  不多说,今天碰到一个问题,HttpURLConnection中文乱码.">
+<meta name="keywords" content="技术研究">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HttpURLConnection中文地址请求乱码">
+<meta property="og:url" content="http://aschouas.com/2017/08/31/HttpURLConnection中文地址请求乱码/index.html">
 <meta property="og:site_name" content="白橡树">
-<meta property="og:description" content="擅长吹牛，放治疗术">
+<meta property="og:description" content="天气终于不热了  不多说,今天碰到一个问题,HttpURLConnection中文乱码.">
+<meta property="og:updated_time" content="2017-08-31T08:22:59.360Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="白橡树">
-<meta name="twitter:description" content="擅长吹牛，放治疗术">
+<meta name="twitter:title" content="HttpURLConnection中文地址请求乱码">
+<meta name="twitter:description" content="天气终于不热了  不多说,今天碰到一个问题,HttpURLConnection中文乱码.">
   
     <link rel="alternative" href="/atom.xml" title="白橡树" type="application/atom+xml">
   
@@ -142,16 +143,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-HttpURLConnection中文地址请求乱码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-HttpURLConnection中文地址请求乱码" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/31/HttpURLConnection中文地址请求乱码/">HttpURLConnection中文地址请求乱码</a>
+    <h1 class="article-title" itemprop="name">
+      HttpURLConnection中文地址请求乱码
     </h1>
   
 
@@ -166,8 +165,15 @@
       
         <blockquote class="blockquote-center">天气终于不热了</blockquote>
 
-<p><em>不多说,今天碰到一个问题,HttpURLConnection中文乱码.</em><br>
-        
+<p><em>不多说,今天碰到一个问题,HttpURLConnection中文乱码.</em><br><a id="more"></a></p>
+<h3 id="下面是初始代码"><a href="#下面是初始代码" class="headerlink" title="下面是初始代码"></a>下面是初始代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.work.api.base;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.BufferedReader;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.io.InputStream;</div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;</div><div class="line"><span class="keyword">import</span> java.io.OutputStream;</div><div class="line"><span class="keyword">import</span> java.io.OutputStreamWriter;</div><div class="line"><span class="keyword">import</span> java.net.HttpURLConnection;</div><div class="line"><span class="keyword">import</span> java.net.InetSocketAddress;</div><div class="line"><span class="keyword">import</span> java.net.Proxy;</div><div class="line"><span class="keyword">import</span> java.net.URL;</div><div class="line"><span class="keyword">import</span> java.net.URLConnection;</div><div class="line"><span class="keyword">import</span> java.util.Iterator;</div><div class="line"><span class="keyword">import</span> java.util.Map;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * </div><div class="line"> * <span class="doctag">@author</span> 治疗术	</div><div class="line"> * <span class="doctag">@Date</span>：2017年8月31日 下午1:05:54</div><div class="line"> * <span class="doctag">@Description</span>: TODO(...) </div><div class="line"> * <span class="doctag">@version</span></div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpRequestor</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">private</span> String charset = <span class="string">"utf-8"</span>;</div><div class="line">    <span class="keyword">private</span> Integer connectTimeout = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> Integer socketTimeout = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> String proxyHost = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> Integer proxyPort = <span class="keyword">null</span>;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * Do GET request</div><div class="line">     * <span class="doctag">@param</span> url</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     * <span class="doctag">@throws</span> Exception</div><div class="line">     * <span class="doctag">@throws</span> IOException</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">doGet</span><span class="params">(String url)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        </div><div class="line">        URL localURL = <span class="keyword">new</span> URL(url);</div><div class="line">        </div><div class="line">        URLConnection connection = openConnection(localURL);</div><div class="line">        HttpURLConnection httpURLConnection = (HttpURLConnection)connection;</div><div class="line">        </div><div class="line">        httpURLConnection.setRequestProperty(<span class="string">"Accept-Charset"</span>, charset);</div><div class="line">        httpURLConnection.setRequestProperty(<span class="string">"Content-Type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">        </div><div class="line">        InputStream inputStream = <span class="keyword">null</span>;</div><div class="line">        InputStreamReader inputStreamReader = <span class="keyword">null</span>;</div><div class="line">        BufferedReader reader = <span class="keyword">null</span>;</div><div class="line">        StringBuffer resultBuffer = <span class="keyword">new</span> StringBuffer();</div><div class="line">        String tempLine = <span class="keyword">null</span>;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span> (httpURLConnection.getResponseCode() &gt;= <span class="number">300</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"HTTP Request is not success, Response code is "</span> + httpURLConnection.getResponseCode());</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            inputStream = httpURLConnection.getInputStream();</div><div class="line">            inputStreamReader = <span class="keyword">new</span> InputStreamReader(inputStream);</div><div class="line">            reader = <span class="keyword">new</span> BufferedReader(inputStreamReader);</div><div class="line">            </div><div class="line">            <span class="keyword">while</span> ((tempLine = reader.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">                resultBuffer.append(tempLine);</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">        &#125; <span class="keyword">finally</span> &#123;</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (reader != <span class="keyword">null</span>) &#123;</div><div class="line">                reader.close();</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (inputStreamReader != <span class="keyword">null</span>) &#123;</div><div class="line">                inputStreamReader.close();</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (inputStream != <span class="keyword">null</span>) &#123;</div><div class="line">                inputStream.close();</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> resultBuffer.toString();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * Do POST request</div><div class="line">     * <span class="doctag">@param</span> url</div><div class="line">     * <span class="doctag">@param</span> parameterMap</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     * <span class="doctag">@throws</span> Exception </div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">doPost</span><span class="params">(String url, Map parameterMap)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        </div><div class="line">        <span class="comment">/* Translate parameter map to parameter date string */</span></div><div class="line">        StringBuffer parameterBuffer = <span class="keyword">new</span> StringBuffer();</div><div class="line">        <span class="keyword">if</span> (parameterMap != <span class="keyword">null</span>) &#123;</div><div class="line">            Iterator iterator = parameterMap.keySet().iterator();</div><div class="line">            String key = <span class="keyword">null</span>;</div><div class="line">            String value = <span class="keyword">null</span>;</div><div class="line">            <span class="keyword">while</span> (iterator.hasNext()) &#123;</div><div class="line">                key = (String)iterator.next();</div><div class="line">                <span class="keyword">if</span> (parameterMap.get(key) != <span class="keyword">null</span>) &#123;</div><div class="line">                    value = (String)parameterMap.get(key);</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    value = <span class="string">""</span>;</div><div class="line">                &#125;</div><div class="line">                </div><div class="line">                parameterBuffer.append(key).append(<span class="string">"="</span>).append(value);</div><div class="line">                <span class="keyword">if</span> (iterator.hasNext()) &#123;</div><div class="line">                    parameterBuffer.append(<span class="string">"&amp;"</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        System.out.println(<span class="string">"POST parameter : "</span> + parameterBuffer.toString());</div><div class="line">        </div><div class="line">        URL localURL = <span class="keyword">new</span> URL(url);</div><div class="line">        </div><div class="line">        URLConnection connection = openConnection(localURL);</div><div class="line">        HttpURLConnection httpURLConnection = (HttpURLConnection)connection;</div><div class="line">        </div><div class="line">        httpURLConnection.setDoOutput(<span class="keyword">true</span>);</div><div class="line">        httpURLConnection.setRequestMethod(<span class="string">"POST"</span>);</div><div class="line">        httpURLConnection.setRequestProperty(<span class="string">"Accept-Charset"</span>, charset);</div><div class="line">        httpURLConnection.setRequestProperty(<span class="string">"Content-Type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">        httpURLConnection.setRequestProperty(<span class="string">"Content-Length"</span>, String.valueOf(parameterBuffer.length()));</div><div class="line">        </div><div class="line">        OutputStream outputStream = <span class="keyword">null</span>;</div><div class="line">        OutputStreamWriter outputStreamWriter = <span class="keyword">null</span>;</div><div class="line">        InputStream inputStream = <span class="keyword">null</span>;</div><div class="line">        InputStreamReader inputStreamReader = <span class="keyword">null</span>;</div><div class="line">        BufferedReader reader = <span class="keyword">null</span>;</div><div class="line">        StringBuffer resultBuffer = <span class="keyword">new</span> StringBuffer();</div><div class="line">        String tempLine = <span class="keyword">null</span>;</div><div class="line">        </div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            outputStream = httpURLConnection.getOutputStream();</div><div class="line">            outputStreamWriter = <span class="keyword">new</span> OutputStreamWriter(outputStream);</div><div class="line">            </div><div class="line">            outputStreamWriter.write(parameterBuffer.toString());</div><div class="line">            outputStreamWriter.flush();</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (httpURLConnection.getResponseCode() &gt;= <span class="number">300</span>) &#123;</div><div class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"HTTP Request is not success, Response code is "</span> + httpURLConnection.getResponseCode());</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            inputStream = httpURLConnection.getInputStream();</div><div class="line">            inputStreamReader = <span class="keyword">new</span> InputStreamReader(inputStream);</div><div class="line">            reader = <span class="keyword">new</span> BufferedReader(inputStreamReader);</div><div class="line">            </div><div class="line">            <span class="keyword">while</span> ((tempLine = reader.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">                resultBuffer.append(tempLine);</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">        &#125; <span class="keyword">finally</span> &#123;</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (outputStreamWriter != <span class="keyword">null</span>) &#123;</div><div class="line">                outputStreamWriter.close();</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (outputStream != <span class="keyword">null</span>) &#123;</div><div class="line">                outputStream.close();</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (reader != <span class="keyword">null</span>) &#123;</div><div class="line">                reader.close();</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (inputStreamReader != <span class="keyword">null</span>) &#123;</div><div class="line">                inputStreamReader.close();</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (inputStream != <span class="keyword">null</span>) &#123;</div><div class="line">                inputStream.close();</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> resultBuffer.toString();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> URLConnection <span class="title">openConnection</span><span class="params">(URL localURL)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        URLConnection connection;</div><div class="line">        <span class="keyword">if</span> (proxyHost != <span class="keyword">null</span> &amp;&amp; proxyPort != <span class="keyword">null</span>) &#123;</div><div class="line">            Proxy proxy = <span class="keyword">new</span> Proxy(Proxy.Type.HTTP, <span class="keyword">new</span> InetSocketAddress(proxyHost, proxyPort));</div><div class="line">            connection = localURL.openConnection(proxy);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            connection = localURL.openConnection();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> connection;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * Render request according setting</div><div class="line">     * <span class="doctag">@param</span> request</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">renderRequest</span><span class="params">(URLConnection connection)</span> </span>&#123;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span> (connectTimeout != <span class="keyword">null</span>) &#123;</div><div class="line">            connection.setConnectTimeout(connectTimeout);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span> (socketTimeout != <span class="keyword">null</span>) &#123;</div><div class="line">            connection.setReadTimeout(socketTimeout);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/*</span></div><div class="line">     * Getter &amp; Setter</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getConnectTimeout</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> connectTimeout;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setConnectTimeout</span><span class="params">(Integer connectTimeout)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.connectTimeout = connectTimeout;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getSocketTimeout</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> socketTimeout;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSocketTimeout</span><span class="params">(Integer socketTimeout)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.socketTimeout = socketTimeout;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getProxyHost</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> proxyHost;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setProxyHost</span><span class="params">(String proxyHost)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.proxyHost = proxyHost;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getProxyPort</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> proxyPort;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setProxyPort</span><span class="params">(Integer proxyPort)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.proxyPort = proxyPort;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getCharset</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> charset;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCharset</span><span class="params">(String charset)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.charset = charset;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在使用get方法的时候请求url含有中文(心跳.jpg),结果报错.<br>这个时候就比较迷茫了<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">httpURLConnection.setRequestProperty(<span class="string">"Accept-Charset"</span>, charset);</div></pre></td></tr></table></figure></p>
+<p>设置过编码了啊!怎么还是会出错了?<br>然后经过很久的思考(Google)…….<br>发现<br>只要<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">URL localURL = <span class="keyword">new</span> URL(url);</div></pre></td></tr></table></figure></p>
+<p>改成<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">URL localURL = <span class="keyword">new</span> URI(url).toASCIIString();</div></pre></td></tr></table></figure></p>
+<p>就行了<br>转成ASCII</p>
+<p>后来发现其实是传进来的地址编码跟文件服务器的编码不一致导致的,只是转成ASCII是通用一点.</p>
+<p><strong>路漫漫</strong></p>
+
       
 
       
@@ -200,539 +206,96 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/31/HttpURLConnection中文地址请求乱码/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://aschouas.com/2017/08/31/HttpURLConnection中文地址请求乱码/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-java片段" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/07/java片段/">java片段</a>
-    </h1>
   
-
-        
-        <a href="/2017/07/07/java片段/" class="archive-article-date">
-  	<time datetime="2017-07-07T05:41:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">很热</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JAVA/" class="article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/07/java片段/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/07/07/java片段/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java片段</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-Java并发之synchronized实现原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/06/Java并发之synchronized实现原理/">Java并发之synchronized实现原理</a>
-    </h1>
   
-
-        
-        <a href="/2017/06/06/Java并发之synchronized实现原理/" class="archive-article-date">
-  	<time datetime="2017-06-06T02:43:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">难受</blockquote>
-
-<p><em>转自<a href="http://blog.csdn.net/javazejian/article/details/72828483#comments?ref=myread" target="_blank" rel="external">http://blog.csdn.net/javazejian/article/details/72828483#comments?ref=myread</a></em></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JAVA/" class="article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/06/Java并发之synchronized实现原理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-懵逼的java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/26/懵逼的java/">懵逼的java</a>
-    </h1>
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://aschouas.com/2017/08/31/HttpURLConnection中文地址请求乱码/", 
+    sourceId: "HttpURLConnection中文地址请求乱码",
+    productKey: "731deb725063409d93f497085cf905e2",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        
-        <a href="/2017/05/26/懵逼的java/" class="archive-article-date">
-  	<time datetime="2017-05-26T07:39:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">周六要上班</blockquote>
-
-<p><em>今天在论坛看到一个很有意思的问题，自认为对java略有心得，但是按照以往的思维，做错了！</em><br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程/" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/26/懵逼的java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-java8新特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/24/java8新特性/">java8新特性</a>
-    </h1>
   
 
-        
-        <a href="/2017/05/24/java8新特性/" class="archive-article-date">
-  	<time datetime="2017-05-24T02:35:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">晚上吃水煮鱼</blockquote>
-
-<p><em>虽然java8出了很久了，自己也有在用，但是没有整理过，借此整理一下.</em></p>
-<h2 id="接口的默认方法"><a href="#接口的默认方法" class="headerlink" title="接口的默认方法"></a>接口的默认方法</h2><p>Java 8允许我们给接口添加一个非抽象的方法实现，只需要使用 default关键字即可，这个特征又叫做扩展方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Formula</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">double</span> <span class="title">calculate</span><span class="params">(<span class="keyword">int</span> a)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">double</span> <span class="title">sqrt</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> Math.sqrt(a);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JAVA/" class="article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/24/java8新特性/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Hexo搭建博客教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/17/Hexo搭建博客教程/">Hexo搭建博客教程</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/17/Hexo搭建博客教程/" class="archive-article-date">
-  	<time datetime="2017-05-17T01:53:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">喜欢吃水蜜桃</blockquote>
-
-<p><em>以前用的博客都丢失了，真的好气啊，所以一直有想法搭建一个自己的博客。所以利用hexo+github搭建了本地博客,用于分享一些心得，记录一些有意思的事情。在这个过程中，遇到了很多问题，在此记录一些配置和遇到的问题。</em></p>
-<h2 id="Hexo搭建博客教程"><a href="#Hexo搭建博客教程" class="headerlink" title="Hexo搭建博客教程"></a>Hexo搭建博客教程</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
-<li><p>下载 node.js 并安装,默认安装 npm</p>
-</li>
-<li><p>下载安装 git，并与 github 关联,详情见上篇文章</p>
-</li>
-<li><p>下载安装 hexo，打开 cmd 运行 <code>npm install -g hexo</code></p>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程/" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/17/Hexo搭建博客教程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-git远程关联github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/16/git远程关联github/">Git远程关联github仓库</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/16/git远程关联github/" class="archive-article-date">
-  	<time datetime="2017-05-16T07:39:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote class="blockquote-center">树欲静而风不止</blockquote>
-
-
-<h2 id="github远程关联本地git"><a href="#github远程关联本地git" class="headerlink" title="github远程关联本地git"></a>github远程关联本地git</h2><ul>
-<li><p>首先需要在本地安装git <a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></p>
-</li>
-<li><p>如果已经成功在本地安装git,又想在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步，那就需要用到SSH Key，github拿到了你的公钥就会知道内容是你推送的,前提是你要有github账号.</p>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术研究</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程/" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/16/git远程关联github/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-我的第一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/我的第一篇文章/">有感</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/我的第一篇文章/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:45:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>天气真的不错</em></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">家中无房又无钱，生活本就艰</div><div class="line">谁知那小情侣，蛮横不讲理</div><div class="line">总秀恩爱朋友圈，还到空间发照片</div><div class="line">无缘无故我就被戳痛心间</div><div class="line">我婉转跟他来抱怨，惨被他羞辱要多读诗篇</div><div class="line">我劝告他们对狗要轻虐，反被他们牵手当着面</div><div class="line">嘲笑了一百遍！一百遍！</div><div class="line">最后无奈只能拉黑屏蔽换取清静空间</div><div class="line">没有那小情侣，生活乐无边</div><div class="line">狂吃到市前，散步在江边</div><div class="line">五杀虐泉感觉自己无法无天</div><div class="line">谁知那小情侣，实在太阴险</div><div class="line">得知此情形，竟拥吻在人前，欢声笑语又好似神仙</div><div class="line">幸得身体健，不然魂归天，徒留悲愤遗恨人间</div><div class="line">为求不见面，唯有加班加点独处办公间</div><div class="line">一边拼事业，一边寻姻缘</div><div class="line">发誓要让女友现，恩爱牵手去逛街</div><div class="line">从此我是好人记心间，期待神气虐狗的那一天。</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/今天没下雨/" class="article-tag-list-link color1">今天没下雨</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/我的第一篇文章/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -756,8 +319,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: undefined,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
