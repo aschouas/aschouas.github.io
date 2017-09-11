@@ -1,0 +1,749 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>心跳</title>
+  <meta name="description" content="demo">
+  <meta name="keywords" content="迪卡龙">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="" />
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="assets/datatable/amazeui.datatables.min.css"/>
+  <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css"/> 
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  
+	  
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<header class="am-topbar am-topbar-inverse admin-header">
+  <div class="am-topbar-brand">
+    <strong>Decathlon</strong> <small></small>
+  </div>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}">切换账号</button>
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 切换账号 
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="admin-content-body">
+		<div class="am-cf am-padding am-padding-bottom-0">
+			<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg"></strong> 1-1<small>Table	</small></div>
+		</div>
+	
+		<!-- <div class="am-g am-g-collapse"> -->
+		  <!-- <div class="am-u-lg-3"> -->
+			<!-- <span class="am-show-md-down" style="background-color:#ccc">sm-full</span> -->
+			<!-- <span class="am-show-lg-only">lg-3</span> -->
+		  <!-- </div> -->
+		  <!-- <div class="am-u-lg-6"> -->
+			<!-- <span class="am-show-md-down" style="background-color:#ccc">sm-full</span> -->
+			<!-- <span class="am-show-lg-only">lg-6</span> -->
+		  <!-- </div> -->
+		  <!-- <div class="am-u-lg-3"> -->
+			<!-- <span class="am-show-md-down">sm-full</span> -->
+			<!-- <span class="am-show-lg-only">lg-3</span> -->
+		  <!-- </div> -->
+		<!-- </div> -->
+		
+		<div class="am-g am-g-collapse">
+		  <div class="am-u-sm-12">
+			<section class="sec-title-colcos">
+				<span>综合得分:97 排名:2 Till Review 低于平均水平</span>
+			</section>
+		  </div>
+		</div>
+		
+		
+		
+		<div class="am-g">
+		  <div class="am-u-md-4 am-u-sm-12 am-u-lg-3">
+			
+                <div>
+                    <div id="regiontopn" style="width: 100%;height: 360px;"></div>
+                </div>
+                <br>
+                <div>
+                  <div id="storetop10" style="width: 100%;height: 360px;"></div>
+                 <!-- <div id="countrystoretop10" style="width: 100%;height: 250px;"></div>-->
+                </div>
+           
+		  </div>
+		  
+		  
+		  <div class="am-u-md-8 am-u-sm-12 am-u-lg-9">
+		  
+		  
+			<div class="am-g">
+				<div class="am-u-md-4 am-u-sm-12 am-u-lg-4 ">
+					<table class="am-table am-table-bordered am-table-radius am-table-striped">
+						<thead>
+						<tr>
+						  <th colspan="4" style="text-align:center;">Store Review</th>
+						</tr>
+						<tr>
+						  <th>ID</th><th>本区域</th><th>区域平均</th><th>全国平均</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>得分</td>
+								<td>12</td>
+								<td>12</td> 
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>评论数</td>
+								<td>12</td>
+								<td>12</td> 
+								<td>12</td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="storecharts" style="width: 100%;height: 250px;"></div>
+					
+				
+				</div>
+				<div class="am-u-md-4 am-u-sm-12 am-u-lg-4 ">
+					<table class="am-table am-table-bordered am-table-radius am-table-striped">
+						<thead>
+						<tr>
+						  <th colspan="4" style="text-align:center;">Till Review</th>
+						</tr>
+						<tr>
+						  <th>ID</th><th>本区域</th><th>区域平均</th><th>全国平均</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>得分</td>
+								<td>12</td>
+								<td>12</td> 
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>评论数</td>
+								<td>12</td>
+								<td>12</td> 
+								<td>12</td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="tillcharts" style="width: 100%;height: 250px;"></div>
+					
+				</div>
+				<div class="am-u-md-4 am-u-sm-12 am-u-lg-4 ">
+					<table class="am-table am-table-bordered am-table-radius am-table-striped">
+						<thead>
+						<tr>
+						  <th colspan="4" style="text-align:center;">Tell Review</th>
+						</tr>
+						<tr>
+						  <th>ID</th><th>本区域</th><th>区域平均</th><th>全国平均</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>得分</td>
+								<td>12</td>
+								<td>12</td> 
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>评论数</td>
+								<td>12</td>
+								<td>12</td> 
+								<td>12</td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="tellcharts" style="width: 100%;height: 250px;"></div>
+				
+				</div>
+			
+			
+			</div>
+			<div class="am-g">
+				<div class="am-u-md-12 am-u-sm-12 am-u-lg-12 ">
+					<div class="am-tabs" data-am-tabs id="doc-my-tabs"> 
+					
+					  <ul class="am-tabs-nav am-nav am-nav-tabs">
+						<li class="am-active"><a href="#tab1">不满意</a></li>
+						<li><a href="#tab2">建议</a></li>
+						<li><a href="#tab3">满意</a></li>
+					  </ul>
+					  
+					  <div class="am-tabs-bd">
+						<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+							<div class="am-g">
+								<div class="am-u-md-6 am-u-sm-12 am-u-lg-6 ">
+									<div id="wordunsatisfaction" style="width: 100%;height: 240px;"></div>
+								</div>
+								<div class="am-u-md-6 am-u-sm-12 am-u-lg-6 ">
+									<table id="my-table" class="am-table-compact am-table-striped am-table-hover"></table>
+								</div>
+							</div>
+						 
+						</div>
+						<div class="am-tab-panel am-fade" id="tab2">
+							<div class="am-g">
+								<div class="am-u-md-4 am-u-sm-12 am-u-lg-6 ">
+									<div id="wordsuggest" style="width: 100%;height: 240px;"></div>
+								</div>
+								<div class="am-u-md-4 am-u-sm-12 am-u-lg-6 ">
+									//.................
+								</div>
+							</div>
+						</div>
+						<div class="am-tab-panel am-fade" id="tab3">
+							<div class="am-g">
+								<div class="am-u-md-4 am-u-sm-12 am-u-lg-6 ">
+									<div id="wordsatisfaction" style="width: 100%;height: 240px;"></div>
+								</div>
+								<div class="am-u-md-4 am-u-sm-12 am-u-lg-6 ">
+									//.................
+								</div>
+							</div>
+						  
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		</div>
+		
+      </div>
+    </div>
+
+	<!-- footer start -->
+    <footer class="admin-content-footer">
+      <hr>
+      <p class="am-padding-left">© 2017 Decathlon</p>
+    </footer>
+
+  </div>
+  <!-- content end -->
+</div>
+
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2017 Decathlon</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/datatable/amazeui.datatables.min.js"></script>
+<script type="text/javascript" src="assets/echarts/echarts.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="https://cdn.datatables.net/fixedcolumns/3.2.2/js/dataTables.fixedColumns.min.js"></script>
+
+
+<script>
+
+$(function (){
+    
+    
+    
+  //TopK 区域门店满意度排行榜
+  var topStoreLabel=['浦东店','徐汇店','长宁店','宝山店','青浦店','奉贤店','金山店','杨浦店','普陀店','嘉定店'];
+  var topStoreDate=[76,78,80,88,91, 93, 94, 97, 98, 99];
+  var topStoreTitle="门店概览";
+  topKshow("regiontopn",topStoreLabel,topStoreDate,topStoreTitle)
+  //TopK 全国门店满意度排行
+  var topCountryLabel=['西安店','上海1店','苏州店','南昌店','武汉店','成都店','太原店','青岛店','深圳2店','北京4店'];
+  var topCountryData=['76','80','82','85','90','93','95','96','97','98'];
+  var topCountryTitle="全国门店满意度排名Top10";
+  topK("storetop10",topCountryLabel,topCountryData,topCountryTitle);
+  
+  
+	var infos_one=new Array([95,97,95,96,95,97,92],[91,92,97,91,99,91,93])
+    var infos_two=new Array([91,92,97,93,95,97,92],[99,92,97,99,99,91,93])
+    var infos_three=new Array([95,91,95,96,95,94,97],[91,92,91,91,99,91,94])
+
+ // 折线图
+    echartsinit("storecharts",infos_one)
+    echartsinit("tillcharts",infos_two)
+    echartsinit("tellcharts",infos_three)
+//满意度柱状图	
+	var data_unsatisfact=[3900, 3340, 3300, 2200, 2000, 1000, 520];
+    wordchartinit("wordunsatisfaction","不满意",data_unsatisfact);	
+	var data_suggest=[100, 720, 1050, 340, 3200, 2300, 200];
+     wordchartinit("wordsuggest","建议",data_suggest);
+     //满意
+     var data_satisfact=[1000, 220, 1250, 3240, 1200, 3300, 1200];
+     wordchartinit("wordsatisfaction","满意",data_satisfact);	
+	
+  
+})
+
+
+//tab切换
+
+$('#doc-my-tabs').find('a').on('opened.tabs.amui', function(e) {
+  console.log('[%s] 选项卡打开了', $(this).text());
+})
+
+var dataSet = [
+    ['产品种类','12%','43','44','55','55','55','55','55','55','55','55','55','55','55'],
+	 ['产品种类','12%','43','44','55','55','55','55','55','55','55','55','55','55','55'],
+	  ['产品种类','12%','43','44','55','55','55','55','55','55','55','55','55','55','55'],
+	   ['产品种类','12%','43','44','55','55','55','55','55','55','55','55','55','55','55'],
+	    ['产品种类','12%','43','44','55','55','55','55','55','55','55','55','55','55','55'],
+		 ['产品种类','12%','43','44','55','55','55','55','55','55','55','55','55','55','55'],
+];
+
+
+//初始化表格
+ $('#my-table').DataTable({
+	<!-- ajax: { -->
+            <!-- url: "https://api.github.com/repos/ssy341/datatables-cn/issues", -->
+            <!-- dataSrc: "" -->
+		<!-- }, -->
+	"data": dataSet,
+	"searching": false,
+	"pageLength":5,
+	"info":false,
+	"paging":false,
+	//"autoWidth":true,
+	"scrollY": "200px",
+	"table-layout":"fixed",
+	"scrollX": true,
+    "scrollCollapse": true,
+	"fixedHeader": true,//固定表头
+	"fixedColumns": true,
+	"stripeClasses": [ 'strip1', 'strip2', 'strip3' ],
+	"columns": [
+            { "title": "", "width":"7rem"},
+            { "title": "占比" },
+            { "title": "总和" },
+            { "title": "1月"},
+			{ "title": "2月"},
+			{ "title": "3月"},
+			{ "title": "4月"},
+			{ "title": "5月"},
+			{ "title": "6月"},
+			{ "title": "7月"},
+			{ "title": "8月"},
+			{ "title": "9月"},
+			{ "title": "10月"},
+			{ "title": "11月"},
+			{ "title": "12月"}
+          
+        ]
+ });
+	
+
+	
+	
+ //加载数据
+//加载不满意的数据
+function loadUnsatisfyData(index){
+    var obj0 = {"total":5,"rows":[  
+            {"productkind":"产品种类","thisstore":23,"region":'12%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}, 
+            {"productkind":"产品库存","thisstore":23,"region":'8%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品设计问题","thisstore":34,"region":'5%',"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品说明","thisstore":12,"region":'8%',"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品质量","thisstore":22,"region":'17%',"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},  
+            {"productkind":"产品价格/性价比","thisstore":33,"region":'15%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"配件","thisstore":33,"region":'20%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品包装","thisstore":33,"region":'21%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},
+            {"productkind":"产品上新","thisstore":33,"region":'4%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87}
+      
+        ]}
+  <!-- var obj1 = {"total":5,"rows":[   -->
+            <!-- {"productkind":"服务态度","thisstore":23,"region":'31%',"country":43,"1m":36,"2m":23,"3m":34,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},   -->
+            <!-- {"productkind":"专业技能","thisstore":34,"region":'29%',"country":54,"1m":18,"2m":34,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},   -->
+            <!-- {"productkind":"人手不足","thisstore":12,"region":'10%',"country":65,"1m":38,"2m":33,"3m":22,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},   -->
+            <!-- {"productkind":"工作效率","thisstore":22,"region":'12%',"country":77,"1m":26,"2m":33,"3m":33,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87},   -->
+            <!-- {"productkind":"收银与支付","thisstore":33,"region":'18%',"country":76,"1m":35,"2m":22,"3m":11,"4m":123,"5m":33,"6m":32,"7m":55,"8m":12,"9m":22,"10m":44,"11m":33,"12m":87} -->
+        <!-- ]} -->
+  
+}
+ 
+ 
+	
+//可点击显示要求 柱状图
+function topKshow(divid,label,data,title){
+  var myChart=echarts.init(document.getElementById(divid));
+
+  var myColor=['#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#d53a35'];
+    
+  var topoption = {
+      title: {
+          text: title
+          // subtext: ''
+      },
+      tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+              type: 'shadow'
+          }
+      },
+      legend: {
+          data: ['排名']
+      },
+      grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '5%',
+         
+          containLabel: true
+      },
+      xAxis: {
+          type: 'value',
+          boundaryGap: [0, 0.01],
+          min:60,
+          max:100,
+          splitLine:{
+            show:false,
+            lineStyle:{
+                color:'#2e3547'
+            }
+        },
+      },
+      yAxis: {
+          type: 'category',
+          data: label
+      },
+      series: [
+          {
+              name: '分数',
+              type: 'bar',
+              barWidth: 10,//柱图宽度
+              data: data,
+              itemStyle: {
+                normal: {
+                	// callback,设定每一bar颜色,配置项color顶axis一组bars颜色
+                    color: function(params) {
+                        var num=myColor.length;
+                        return myColor[params.dataIndex%num]
+                    }
+                }
+	   		}
+          }
+      ]
+  };
+  myChart.setOption(topoption);
+  window.addEventListener("resize",function(){
+    myChart.resize();
+  })
+  myChart.on('click', function (params) {
+      console.log(params.name)
+      //点击柱状图，跳转到相应的区域
+      switch(params.name){
+      case '嘉定店':
+        window.location.href="index.html?region="+params.name;
+        break;
+      default:
+        console.log("不跳转")
+      }
+
+  })
+
+}   
+
+//柱状图加载    
+function topK(divid,label,data,title){
+  var myChart=echarts.init(document.getElementById(divid));
+
+  var topoption = {
+      title: {
+          text: title
+          // subtext: ''
+      },
+      tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+              type: 'shadow'
+          }
+      },
+      legend: {
+          data: ['排名']
+      },
+      grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '5%',
+         
+          containLabel: true
+      },
+      xAxis: {
+          type: 'value',
+          boundaryGap: [0, 0.01],
+          min:60,
+          max:100,
+          splitLine:{
+            show:false,
+            lineStyle:{
+                color:'#2e3547'
+            }
+        },
+      },
+      yAxis: {
+          type: 'category',
+          data: label
+      },
+      series: [
+          {
+              name: '分数',
+              type: 'bar',
+              barWidth: 10,//柱图宽度
+              data: data,
+              itemStyle:{
+                  normal:{
+                      color:"#0E90D2"
+                     
+                      
+                  }
+              }
+          }
+      ]
+  };
+  myChart.setOption(topoption);
+  window.addEventListener("resize",function(){
+    myChart.resize();
+  })
+  myChart.on('click', function (params) {
+      console.log(params.name)
+      //点击柱状图，跳转到相应的区域
+      switch(params.name){
+      case '嘉定店':
+        window.location.href="index.html?region="+params.name;
+        break;
+      default:
+        console.log("不跳转")
+      }
+
+  })
+
+}    
+
+
+//得分折线图
+function echartsinit(divid,infos){
+  var myChart=echarts.init(document.getElementById(divid));
+  // 指定图表的配置项和数据
+  var myOption= {
+      title: {
+          // text: 'Store Review对比'
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+          // data:['销量']
+          data:['本区域','全国'],
+           icon:'rect'
+      },
+      xAxis: {
+          // data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+          type: 'category',
+          boundaryGap: false,
+          data:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"]
+      },
+      yAxis: {
+        type: 'value',
+        min:80,
+        max:100, 
+        splitLine:{
+            show:false,
+            lineStyle:{
+                color:'#2e3547'
+            }
+        }
+      },
+      series:[
+          /*{
+              name:'本店',
+              type:'line',
+              stack: '总量',
+              data:[120, 132, 101, 134, 90, 230, 210,121,135,80,111,134]
+          },*/
+          {
+              name:'本区域',
+              type:'line',
+              symbol:'circle',
+              symbolSize:1,
+              showAllSymbol:false,
+              smooth:true, 
+              lineStyle: { //线条样式
+              normal: {
+                width: 1.5
+                  }
+              },
+              data:infos[0],
+                markLine : {
+                label:{
+	            		normal:{
+	            			show:true,
+	            			position:'',
+	            			formatter:''
+	            		}
+	            	},
+            	lineStyle:{
+            		normal:{
+            			color:'red'
+            		}
+            	},
+            	symbol:'none',
+                silent:'true',
+                data : [
+                    {
+                        name: '标准值',
+                        yAxis: 95
+                    },
+                ]
+            }
+          },
+          {
+              name:'全国',
+              type:'line',
+              symbol:'circle',
+              symbolSize:1,
+              showAllSymbol:false,
+              smooth:true, 
+              lineStyle: { //线条样式
+              normal: {
+                width: 1.5
+                  }
+              },
+              data:infos[1]
+          }
+
+      ]
+  };
+  myChart.clear()
+  myChart.setOption(myOption);
+  window.addEventListener("resize",function(){
+    myChart.resize();
+  })
+};
+
+
+   
+  //初始化不满意||建议||满意
+function wordchartinit(divid,title,data){
+    var wordChart=echarts.init(document.getElementById(divid));
+    var myColor=['#D53A35','#D53A35','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2','#0E90D2'];
+    // 词频
+    var wordOption = {
+        color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        title: {
+            text: title
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                "axisLabel":{  
+                    interval: 0  
+                },
+                data : ['产品', '销售助理', '开店策略', '产品库存', '客服助理', '收银助理', '官网'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:title+'个数',
+                type:'bar',
+                barWidth: '60%',
+                data:data,
+                itemStyle: {
+                normal: {
+                	// callback,设定每一bar颜色,配置项color顶axis一组bars颜色
+                    color: function(params) {
+                        var num=myColor.length;
+                        return myColor[params.dataIndex%num]
+                    }
+                }
+	   		}
+               
+	   		}
+            
+        ]
+    };
+  wordChart.clear()
+  wordChart.setOption(wordOption);
+  <!-- wordChart.on('click', function (params) { -->
+      <!-- // console.log(params.dataIndex); -->
+
+      <!-- switch(title){ -->
+      <!-- case '不满意': -->
+        <!-- loadUnsatisfyData(params.dataIndex) -->
+        <!-- break; -->
+      <!-- case '建议': -->
+        <!-- loadSuggestData(params.dataIndex) -->
+        <!-- break; -->
+      <!-- case '满意': -->
+        <!-- loadSatisfyData(params.dataIndex) -->
+        <!-- break; -->
+      <!-- default: -->
+        <!-- console.log("暂时还没测试到这一步") -->
+      <!-- } -->
+
+      
+  <!-- }); -->
+  
+  window.addEventListener("resize",function(){
+    wordChart.resize();
+  })
+  
+}  
+
+</script>
+
+
+</body>
+</html>
