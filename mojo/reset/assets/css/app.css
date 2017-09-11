@@ -1,0 +1,81 @@
+/* Write your styles */
+
+
+td{
+    text-align: center;
+    vertical-align:middle !important;
+   
+}
+
+
+th{
+    text-align: center;
+}
+
+.title_td{
+    font-weight: 600;
+    height: 65px !important;
+}
+
+.iconp img{
+    padding-left:20px; 
+    font-size: 26px;
+    font-weight: 600
+}
+
+.iconp {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-left: 50px;
+    height: 150px;
+}
+
+.left_td{
+    float: left;
+}
+.datagrid-cell{
+    text-align: left
+}
+
+.am-table caption{
+    
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.tabs li a.tabs-inner {
+    color: #0E2D5F;
+    background-color: #0E90D2;
+    /* background: -webkit-linear-gradient(top,#EFF5FF 0,#E0ECFF 100%); */
+    background: -moz-linear-gradient(top,#EFF5FF 0,#E0ECFF 100%);
+    background: -o-linear-gradient(top,#EFF5FF 0,#E0ECFF 100%);
+    /* background: linear-gradient(to bottom,#EFF5FF 0,#e1edff 100%); */
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#EFF5FF,endColorstr=#E0ECFF,GradientType=0);
+}
+
+
+.login_left{
+    
+   width: 75%;
+    height: 100%;
+    float: left;
+}
+
+.login_right{
+    width: 24%;
+    float: left;
+    margin-top: 400px;
+}
+
+
+.am-slider{
+    height: 100%;
+    
+}
+
+.am-slider li img {
+    height: 100%;
+}
