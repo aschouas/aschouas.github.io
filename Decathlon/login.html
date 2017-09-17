@@ -1,62 +1,53 @@
-<!DOCTYPE>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="login">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="">
+    <link rel="apple-touch-icon-precomposed" href="">
+    <meta name="apple-mobile-web-app-title" content="" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>用户登录</title>
 </head>
-<body>
-    
-    
-     
-        <div class="login_right">
 
-          <!--  <h3 style="text-align: center;">登录</h3>-->
-            <div style="margin-bottom:10px; text-align: center;">  
-                <input class="easyui-textbox" id="logname" style="width:62%;height:30px;padding:12px;" data-options="prompt:'用户名',iconCls:'icon-man',iconWidth:38">  
-            </div>  
-            <div style=" text-align: center;">  
-                <button id="button">登录</button>
-				 <button id="delete">登出</button>
-            </div> 
+<body data-type="login">
+    <script src="assets/js/theme.js"></script>
+    <div class="am-g tpl-g">
+       
+        <div class="tpl-login">
+            <div class="tpl-login-content">
+                <div class="tpl-login-logo">
+                </div>
+                <form class="am-form tpl-form-line-form">
+                    <div class="am-form-group">
+                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入账号">
+                    </div>
+                    <div class="am-form-group">
+                        <input type="password" class="tpl-form-input" id="user-pass" placeholder="请输入密码">
+                    </div>
+                    <div class="am-form-group tpl-login-remember-me">
+                    </div>
+					
+                    <div class="am-form-group">
+                        <button type="button" id="loginbuttton" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">确定</button>
+
+                    </div>
+                </form>
+            </div>
         </div>
+    </div>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/app.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	
-	<script>
-		
-	$("#button").click(function(){
-		var name=$("#logname").val();
-		$.ajax({
-			 type: "POST",
-             url: "http://localhost:8080/bxs/login",
-             data: {uname:name},
-             dataType: "json",
-             success: function(data){
-				alert("成功"+data)
-			 },
-			 error: function () {
-				console.log("error");
-				}
-
-		})
-		
-	})
-	
-	$("#delete").click(function(){
-		$.ajax({
-			type: "DELETE",
-             url: "http://localhost:8080/bxs/logout",
-             data: {uname:"11111"},
-             dataType: "jsonp",
-             success: function(data){
-				alert("成功"+data)
-			 },
-			 error: function () {
-				console.log("error");
-			}
-		})
-	})
-	</script>
 </body>
+
 </html>
