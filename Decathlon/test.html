@@ -335,37 +335,7 @@ $(function (){
   var topStoreTitle="门店概览";
   topKshow("storetop10",topStoreLabel,topStoreDate,topStoreTitle,0)
   
-  var topCountryLabel=['龙德', '欢乐城', '新星', '古田店', '津滨店','诸暨', '瓯海', '莫干山路', '芙蓉南', '海口大英山店']
-  var topCountryData=[71.98, 73.04, 75.06, 76.08, 78.2, 79.64, 80.64, 81.16, 82.12, 86.13]
-  var topCountryTitle="全国门店满意度排名Top10";
   
-  topK("countrystoretop10",topCountryLabel,topCountryData,topCountryTitle,20);
-  
- 
-	var time_label=["4月","5月","6月","7月"]
-	var com_label=["本区域","全国"];
-	var infos_one=new Array([62.6, 63.4, 67.3],[58.2, 59.5, 62.8])
-    var infos_two=new Array([90.89, 90.26, 89.23],[90.46, 89.64, 90.32])
-    var infos_three=new Array([90, 89, 89],[90, 89, 90])
-
- // 折线图
-    compare_score("totalstorecharts",com_label,time_label,"Store review",40,infos_one);
-    compare_score("totaltillcharts",com_label,time_label,"Till review",85,infos_two)
-    compare_score("totaltellcharts",com_label,time_label,"Tell Review",85,infos_three)
-	
-	//满意度柱状图	
-	var data_unsatisfact=[4, 4, 10, 135, 202, 215]
-	var titlevalue=['保安/保洁', '开店策略', '无具体评价', '销售/客服/收银助理', '商场管理', '产品']
-    wordchartinit("wordunsatisfaction","不满意",data_unsatisfact,titlevalue);	
-	
-	var titlevaluetwo=['售后服务', 'omni-Channel', '开店策略', '其他', '销售/客服/收银助理', '商场管理', '产品']
-	var data_suggest=[2, 3, 8, 12, 47, 183, 209]
-     wordchartinit("wordsuggest","建议",data_suggest,titlevaluetwo);
-	 
-	var titlevaluethree=['开店策略', '售后服务', '商场管理', '销售/客服/收银助理', '产品', '无具体评价']
-     var data_satisfact=[5, 14, 82, 178, 266, 702]
-     wordchartinit("wordsatisfaction","满意",data_satisfact,titlevaluethree);	
-	
   
 	//表格
 
