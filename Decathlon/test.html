@@ -27,13 +27,262 @@
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
   以获得更好的体验！</p>
 <![endif]-->
-  <!-- content start -->
+
+<header class="am-topbar am-topbar-inverse admin-header">
+  <div class="am-topbar-brand">
+	<strong id="title-show">Decathlon</strong>
+	 <a id="forback" style="display: none;" href="total.html">返回</a>
+  </div>
   
+   <div class="am-topbar-brand am-show-lg-only" style="padding-left:40%;";>
+    <span id="titlelg"></span>
+  </div>
+
+
+  <div class="am-topbar-brand am-show-sm-only" style="padding-left:28%;";data-am-collapse="{target: '#title-one'}">
+    <span id="titlesm"></span>
+  </div>
+
+ <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+	
+	 <li class="am-dropdown" data-am-dropdown>
+        <a  href="upload.html">
+          <span class="am-icon-users"></span> 文件上传
+        </a>
+      </li>
+      <li class="am-dropdown">
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="login.html">
+          <span class="am-icon-users"></span> 切换账号 
+        </a>
+      </li>
+	  
+	 
+    </ul>
+  </div>
+</header>
+
+
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="admin-content-body">
+		<div class="am-cf am-padding am-padding-bottom-0">
+			<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg"></strong> 1-1<small>Table	</small></div>
+		</div>
+	
+		<!-- <div class="am-g am-g-collapse"> -->
+		  <!-- <div class="am-u-lg-3"> -->
+			<!-- <span class="am-show-md-down" style="background-color:#ccc">sm-full</span> -->
+			<!-- <span class="am-show-lg-only">lg-3</span> -->
+		  <!-- </div> -->
+		  <!-- <div class="am-u-lg-6"> -->
+			<!-- <span class="am-show-md-down" style="background-color:#ccc">sm-full</span> -->
+			<!-- <span class="am-show-lg-only">lg-6</span> -->
+		  <!-- </div> -->
+		  <!-- <div class="am-u-lg-3"> -->
+			<!-- <span class="am-show-md-down">sm-full</span> -->
+			<!-- <span class="am-show-lg-only">lg-3</span> -->
+		  <!-- </div> -->
+		<!-- </div> -->
 		
-		 <div id="storetop10" style="width: 100%;height: 500px;"></div>
-        
-	
-	
+		<div class="am-g am-g-collapse">
+		   <div class="am-u-sm-12">
+			 <section class="sec-title-colcos">
+				 <strong>综合得分:74.6 排名:3 </strong><img src="assets/img/th.jpg">
+			 </section>
+		   </div>
+		</div>
+		
+		
+		
+		<div class="am-g">
+		  <div class="am-u-md-4 am-u-sm-12 am-u-lg-3">
+                <div>
+				 
+                  <div id="storetop10" style="width: 100%;height: 500px;"></div>
+                  <div id="countrystoretop10" style="width: 100%;height: 300px;"></div>
+                </div>          
+		  </div>
+		  
+		  
+		  <div class="am-u-md-8 am-u-sm-12 am-u-lg-9">
+		  
+		  
+			<div class="am-g">
+				<div class="am-u-md-4 am-u-sm-12 am-u-lg-4 ">
+					<table class="am-table am-table-bordered am-table-radius  am-table-compact">
+						<thead>
+						<tr>
+						  <th colspan="3" style="text-align:center;">Store Review</th>
+						</tr>
+						<tr>
+						  <th>ID</th><th>得分</th><th>评论数</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>本区域</td>
+								<td>64.5</td>
+								<td>2,281</td>
+							
+							</tr>
+							<tr>
+								<td>区域平均</td>
+								<td>61.3</td>
+								<td>3,685</td>
+							</tr>
+							<tr>
+								<td>全国平均</td>
+								<td>60.2</td>
+								<td>18,425</td>
+							</tr>
+							
+							
+							
+						</tbody>
+					</table>
+					<div id="totalstorecharts" style="width: 100%;height: 250px;"></div>
+					
+				
+				</div>
+				<div class="am-u-md-4 am-u-sm-12 am-u-lg-4 ">
+					<table class="am-table am-table-bordered am-table-radius am-table-compact">
+						<thead>
+						<tr>
+						  <th colspan="4" style="text-align:center;">Till Review</th>
+						</tr>
+						<tr>
+						  <th>ID</th><th>得分</th><th>评论数</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+								<td>本区域</td>
+								<td>90.1</td>
+								<td>760,443</td>
+							
+							</tr>
+							<tr>
+								<td>区域平均</td>
+								<td>90.3</td>
+								<td>1,158,126</td>
+							</tr>
+							<tr>
+								<td>全国平均</td>
+								<td>90.2</td>
+								<td>5,790,631</td>
+							</tr>
+							
+							
+						</tbody>
+					</table>
+					<div id="totaltillcharts" style="width: 100%;height: 250px;"></div>
+					
+				</div>
+				<div class="am-u-md-4 am-u-sm-12 am-u-lg-4 ">
+					<table class="am-table am-table-bordered am-table-radius am-table-compact">
+						<thead>
+						<tr>
+						  <th colspan="4" style="text-align:center;">Tell Review</th>
+						</tr>
+						<tr>
+						  <th>ID</th><th>得分</th><th>评论数</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>本区域</td>
+								<td>89.4</td>
+								<td>60</td>
+							
+							</tr>
+							<tr>
+								<td>区域平均</td>
+								<td>89.7</td>
+								<td>109</td>
+							</tr>
+							<tr>
+								<td>全国平均</td>
+								<td>89.9</td>
+								<td>546</td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="totaltellcharts" style="width: 100%;height: 250px;"></div>
+				
+				</div>
+			
+			
+			</div>
+			<div class="am-g">
+				<div class="am-u-md-12 am-u-sm-12 am-u-lg-12 ">
+					<div class="am-tabs" data-am-tabs="{noSwipe: 1}" id="doc-my-tabs"> 
+					
+					  <ul class="am-tabs-nav am-nav am-nav-tabs">
+						<li class="am-active"><a href="#tab1">不满意</a></li>
+						<li><a href="#tab2">建议</a></li>
+						<li><a href="#tab3">满意</a></li>
+					  </ul>
+					  
+					  <div class="am-tabs-bd">
+						<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+							<div class="am-g">
+								<div class="am-u-md-6 am-u-sm-12 am-u-lg-6 ">
+									<div id="wordunsatisfaction" style="width: 100%;height: 280px;"></div>
+								</div>
+								
+								<div class="am-u-md-6 am-u-sm-12 am-u-lg-6 ">
+									<table id="my-table" style="background-color:#fff" class="am-table  am-table-compact am-table-striped "></table>
+								</div>
+								
+							</div>
+						 
+						</div>
+						<div class="am-tab-panel am-fade" id="tab2">
+							<div class="am-g">
+								<div class="am-u-md-4 am-u-sm-12 am-u-lg-6 ">
+									<div id="wordsuggest" style="width: 100%;height: 280px;"></div>
+								</div>
+								<div class="am-u-md-4 am-u-sm-12 am-u-lg-6 ">									
+										<table id="my-table-one" style="background-color:#fff" class="am-table  am-table-compact am-table-striped "></table>
+								   
+								</div>
+								
+							</div>
+						</div>
+						<div class="am-tab-panel am-fade" id="tab3">
+							<div class="am-g">
+								<div class="am-u-md-4 am-u-sm-12 am-u-lg-6 ">
+									<div id="wordsatisfaction" style="width: 100%;height: 280px;"></div>
+								</div>
+								<div class="am-u-md-4 am-u-sm-12 am-u-lg-6 ">
+									<table id="my-table-two" style="background-color:#fff" class="am-table  am-table-compact am-table-striped "></table>
+								</div>
+							</div>
+						  
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		</div>
+		
+      </div>
+    </div>
+
+	<!-- footer start -->
+    <footer class="admin-content-footer">
+      <hr>
+      <p class="am-padding-left">© 2017 Decathlon</p>
+    </footer>
+
+  </div>
+  <!-- content end -->
+</div>
 
 <!-- <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a> -->
 
@@ -53,9 +302,8 @@
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <script type="text/javascript" src="assets/echarts/echarts.min.js"></script>
-<script src="assets/datatable/amazeui.datatables.min.js"></script>
+
 <script src="assets/js/app.js"></script>
-<script src="assets/datatable/dataTables.fixedColumns.min.js"></script>
 
 
 
@@ -91,7 +339,40 @@ $(function (){
   var topStoreTitle="门店概览";
   topKshow("storetop10",topStoreLabel,topStoreDate,topStoreTitle,0)
   
+  var topCountryLabel=['龙德', '欢乐城', '新星', '古田店', '津滨店','诸暨', '瓯海', '莫干山路', '芙蓉南', '海口大英山店']
+  var topCountryData=[71.98, 73.04, 75.06, 76.08, 78.2, 79.64, 80.64, 81.16, 82.12, 86.13]
+  var topCountryTitle="全国门店满意度排名Top10";
   
+  topK("countrystoretop10",topCountryLabel,topCountryData,topCountryTitle,20);
+  
+ 
+	var time_label=["4月","5月","6月","7月"]
+	var com_label=["本区域","全国"];
+	var infos_one=new Array([62.6, 63.4, 67.3],[58.2, 59.5, 62.8])
+    var infos_two=new Array([90.89, 90.26, 89.23],[90.46, 89.64, 90.32])
+    var infos_three=new Array([90, 89, 89],[90, 89, 90])
+
+ // 折线图
+    compare_score("totalstorecharts",com_label,time_label,"Store review",40,infos_one);
+    compare_score("totaltillcharts",com_label,time_label,"Till review",85,infos_two)
+    compare_score("totaltellcharts",com_label,time_label,"Tell Review",85,infos_three)
+	
+	//满意度柱状图	
+	var data_unsatisfact=[4, 4, 10, 135, 202, 215]
+	var titlevalue=['保安/保洁', '开店策略', '无具体评价', '销售/客服/收银助理', '商场管理', '产品']
+    wordchartinit("wordunsatisfaction","不满意",data_unsatisfact,titlevalue);	
+	
+	var titlevaluetwo=['售后服务', 'omni-Channel', '开店策略', '其他', '销售/客服/收银助理', '商场管理', '产品']
+	var data_suggest=[2, 3, 8, 12, 47, 183, 209]
+     wordchartinit("wordsuggest","建议",data_suggest,titlevaluetwo);
+	 
+	var titlevaluethree=['开店策略', '售后服务', '商场管理', '销售/客服/收银助理', '产品', '无具体评价']
+     var data_satisfact=[5, 14, 82, 178, 266, 702]
+     wordchartinit("wordsatisfaction","满意",data_satisfact,titlevaluethree);	
+	
+  
+	//表格
+
   
 })
 
