@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="车主收益管理">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="">
+    <link rel="apple-touch-icon-precomposed" href="">
+    <meta name="apple-mobile-web-app-title" content="" />
+    <script src="assets/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="bootstarp-table/bootstrap-table.css" />
+    <link rel="stylesheet" href="bootstarp-table/bootstrap-editable.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/conver.css">
+    
+    <script src="assets/js/jquery.min.js"></script>
+
+</head>
+
+<body data-type="widgets">
+    <script src="assets/js/theme.js"></script>
+    <div class="am-g tpl-g">
+        <!-- 头部 -->
+        <header>
+            <!-- logo -->
+            <div class="am-fl tpl-header-logo">
+                <a href="javascript:;">这里会有一个logo<img src="" alt=""></a>
+            </div>
+            <!-- 右侧内容 -->
+            <div class="tpl-header-fluid">
+                <!-- 侧边切换 -->
+                <div class="am-fl tpl-header-switch-button am-icon-list">
+                    <span>
+
+                </span>
+                </div>
+                <!-- 搜索 -->
+                <div class="am-fl tpl-header-search">
+                    <form class="tpl-header-search-form" action="javascript:;">
+                        <button class="tpl-header-search-btn am-icon-search"></button>
+                        <input class="tpl-header-search-box" type="text" placeholder="搜索内容...">
+                    </form>
+                </div>
+                <!-- 其它功能-->
+                <div class="am-fr tpl-header-navbar">
+                    <ul>
+                        <!-- 欢迎语 -->
+                        <li class="am-text-sm tpl-header-navbar-welcome">
+                            <a href="javascript:;">欢迎你, <span>白橡树</span> </a>
+                        </li>
+
+                        <!-- 新邮件 -->
+                        <li class="am-dropdown tpl-dropdown" data-am-dropdown>
+                            <a href="javascript:;" class="am-dropdown-toggle tpl-dropdown-toggle" data-am-dropdown-toggle>
+                                <i class="am-icon-envelope"></i>
+                                <span class="am-badge am-badge-success am-round item-feed-badge">4</span>
+                            </a>
+                            <!-- 弹出列表 -->
+                            <ul class="am-dropdown-content tpl-dropdown-content">
+                                <li class="tpl-dropdown-menu-messages">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
+                                        <div class="menu-messages-ico">
+                                            <img src="assets/img/user01.png" alt="">
+                                        </div>
+                                        <div class="menu-messages-time">
+                                            1小时前
+                                        </div>
+                                        <div class="menu-messages-content">
+                                            <div class="menu-messages-content-title">
+                                                <i class="am-icon-circle-o am-text-success"></i>
+                                                <span>夕风色</span>
+                                            </div>
+                                            <div class="am-text-truncate">斜阳又似胭脂染在面庞上
+                                                ，这一刻最难忘</div>
+                                            <div class="menu-messages-content-time">2017-11-16 下午 16:40</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="tpl-dropdown-menu-messages">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
+                                        <div class="menu-messages-ico">
+                                            <img src="assets/img/user02.png" alt="">
+                                        </div>
+                                        <div class="menu-messages-time">
+                                            1天前
+                                        </div>
+                                        <div class="menu-messages-content">
+                                            <div class="menu-messages-content-title">
+                                                <i class="am-icon-circle-o am-text-warning"></i>
+                                                <span>小张</span>
+                                            </div>
+                                            <div class="am-text-truncate"> 不甘心 跌落深渊挣扎起来还企盼天际
+                                                    爱珍贵 情愿分手讲再会 将错就错 </div>
+                                            <div class="menu-messages-content-time">2017-11-16 上午 17:23</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-messages">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
+                                        <i class="am-icon-circle-o"></i> 进入列表…
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 新提示 -->
+                        <li class="am-dropdown" data-am-dropdown>
+                            <a href="javascript:;" class="am-dropdown-toggle" data-am-dropdown-toggle>
+                                <i class="am-icon-bell"></i>
+                                <span class="am-badge am-badge-warning am-round item-feed-badge">5</span>
+                            </a>
+
+                            <!-- 弹出列表 -->
+                            <ul class="am-dropdown-content tpl-dropdown-content">
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-line-chart"></i>
+                                            <span> 这是一个消息</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            12分钟前
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-star"></i>
+                                            <span> 有3个消息</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            30分钟前
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-folder-o"></i>
+                                            <span> 这是一个消息</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            1天前
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <i class="am-icon-bell"></i> 进入列表…
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 退出 -->
+                        <li class="am-text-sm">
+                            <a href="javascript:;">
+                                <span class="am-icon-sign-out"></span> 退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+        <!-- 风格切换 -->
+        <div class="tpl-skiner">
+            <div class="tpl-skiner-toggle am-icon-cog">
+            </div>
+<!--
+            <div class="tpl-skiner-content">
+                <div class="tpl-skiner-content-title">
+                    选择主题
+                </div>
+                <div class="tpl-skiner-content-bar">
+                    <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                    <span class="skiner-color skiner-black" data-color="theme-black"></span>
+                </div>
+            </div>
+-->
+        </div>
+        <!-- 侧边导航栏 -->
+            <div class="left-sidebar">
+            <!-- 用户信息 -->
+            <div class="tpl-sidebar-user-panel">
+                <div class="tpl-user-panel-slide-toggleable">
+                    <div class="tpl-user-panel-profile-picture">
+                        <img src="assets/img/user01.png" alt="">
+                    </div>
+                    <span class="user-panel-logged-in-text">
+              <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
+              白橡树
+          </span>
+                    <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
+                </div>
+            </div>
+
+            <!-- 菜单 -->
+                      <ul class="sidebar-nav">
+<!--                <li class="sidebar-nav-heading">Components <span class="sidebar-nav-heading-info"> 附加组件</span></li>-->
+                <li class="sidebar-nav-link">
+                    <a href="index.html" >
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 数据统计
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="member.html" >
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 会员统计
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="car.html">
+                        <i class="am-icon-calendar sidebar-nav-link-logo"></i> 车辆管理
+                    </a>
+                </li>
+                
+                <li class="sidebar-nav-link">
+                    <a href="order.html">
+                        <i class="am-icon-calendar sidebar-nav-link-logo"></i> 订单管理
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title active">
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 财务管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="car_earnings.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 车主收益管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 系统设置
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="advertisement.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 广告设置
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="permission.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 权限设置
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="commission.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 佣金设置
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="platforms.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 规则设置
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="complaint.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 举报投诉
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="systemmessage.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 推送消息
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                
+            </ul>
+        </div>
+
+
+         <!-- 内容区域 -->
+       <div class="tpl-content-wrapper">
+            <div class="row-content am-cf">
+                <div class="row">
+                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                        <div class="widget am-cf">
+                            <div class="widget-head am-cf">
+                                <div class="widget-title  am-cf">车主收益管理</div>
+                            </div>
+                            <div class="widget-body  am-fr">
+                                 <div id="toolbar">
+                                     
+                                     <div class="am-g">
+                                      <div class="am-u-sm-5">
+                                        <form action="" class="am-form" data-am-validator>
+                                            <span style="float: left;width: 45%">
+                                             <input type="text" class="am-form-field" placeholder="2017-11-17" data-am-datepicker readonly required /> 
+                                            </span>
+                                            
+                                             <span style="float: left;width: 45%;padding-left: 2%">
+                                             <input type="text" class="am-form-field" placeholder="2017-11-17" data-am-datepicker readonly required /> 
+                                            </span>
+                                           
+                                        </form>       
+                                         
+                                    </div>
+                                      <div class="am-u-sm-7">
+                                         <label class="am-radio-inline re-size" style="margin-left: 2%">
+                                             
+                                            <input type="radio" name="radio10" value="1" data-am-ucheck checked="checked" style="color: red"> 全部
+                                          </label>
+                                     
+                                         <label class="am-radio-inline re-size" >
+                                             
+                                            <input type="radio" name="radio10" value="1" data-am-ucheck checked="checked" style="color: red"> 已结款
+                                          </label>
+                                          <label class="am-radio-inline re-size">
+                                            <input type="radio" name="radio10" value="" data-am-ucheck> 未结款
+                                              
+                                          </label>   
+                                      </div>
+                                    </div>
+                                   
+                                </div>
+                                    <table id="table_car"
+                                         >
+                                    </table> 
+                            
+                                <span style="float: right;font-weight: 600;text-align: center;">总金额:14387483 已结款:4534 未结款：7676  <button type="button" class="am-btn am-btn-success am-btn-xs">批量结款</button> </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    
+    <div class="am-modal " tabindex="-1" id="my-alert" >
+     
+                    <div class="am-u-sm-6 am-u-md-6 am-u-lg-6" style="margin-left: 20%;margin-top: 10%;">
+                        <div class="widget am-cf">
+                            <div class="widget-head am-cf">
+                                <div class="widget-title  am-cf">
+                                账号/电话：151212121212121
+                                姓名：白橡树
+                                性别：男
+                                评分：5
+                               
+                               
+                                </div>
+
+
+                            </div>
+                            <div class="widget-body  am-fr">
+                                <ul style="float: left;text-align: left;padding-left: 15%">
+                                    <li>车品牌：绿源</li>
+                                     <li>车型：小电摩</li>
+                                     <li>标题：10成新的小电驴</li>
+                                     <li>单价：5/h</li>
+                                     <li>出租时间段：2017-11-18~2017-11-19</li>
+                                     
+                                    <li>车辆图片:</li>
+                                    <li><img src="assets/img/user01.png" alt=""></li>
+                                   
+                                </ul>
+                                <ul style="float: left;padding-left: 10%;text-align: left;">
+                                     <li>微信：15111111111</li>
+                                     
+                                     <li>车位置：湖南省岳麓区</li>
+                                     <li>购车时间：2017-11-1-11</li>
+                                     <li>行驶里程：11111</li>
+                               
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+      <script src="assets/js/amazeui.min.js"></script>
+    <script src="bootstarp-table/bootstrap-table.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+<script>
+        
+    var $table = $('#table_car'),
+    $remove = $('#remove'),
+    selections = [];
+        
+        
+    function initTable() {
+        $table.bootstrapTable({
+            height: getHeight(),
+            url: '',         //请求后台的URL（*）
+            method: 'get',                      //请求方式（*）
+            toolbar: '#toolbar',                //工具按钮用哪个容器
+            striped: true,                      //是否显示行间隔色
+            cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
+            pagination: true,                   //是否显示分页（*）
+            sortable: false,                     //是否启用排序
+            sortOrder: "asc",                   //排序方式
+           // queryParams: oTableInit.queryParams,//传递参数（*）
+            sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+            pageNumber:1,                       //初始化加载第一页，默认第一页
+            pageSize: 10,                       //每页的记录行数（*）
+            pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+            search: true,                       //是否显示表格搜索，此搜索是客户端搜索，不会进服务端，所以，个人感觉意义不大
+            strictSearch: true,
+            showColumns: true,                  //是否显示所有的列
+            showRefresh: true,                  //是否显示刷新按钮
+            minimumCountColumns: 2,             //最少允许的列数
+            clickToSelect: true,                //是否启用点击选中行
+            height: 400,                        //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
+            uniqueId: "ID",                     //每一行的唯一标识，一般为主键列
+            showToggle:false,                    //是否显示详细视图和列表视图的切换按钮
+            cardView: false,                    //是否显示详细视图
+            detailView: false,                   //是否显示父子表
+            exportDataType: "basic",              //basic', 'all', 'selected'.
+             data: [{
+                "id": 13511111,
+                "name": "这是一个电动车",
+                "price": "5/h"
+            },
+                   {
+                "id": 1351111111115,
+                "name": "这是一个电动车",
+                "price": "5/h"
+            },
+                   {
+               "id": 1351111111113,
+                "name": "这是一个电动车",
+                "price": "5/h"
+            },
+                   {
+               "id": 1351111111112,
+                "name": "这是一个电动车",
+                "price": "5/h"
+            }],
+            columns: [
+                [
+                    {
+                        field: 'state',
+                        checkbox: true,
+                       
+                        align: 'center',
+                        valign: 'middle'
+                    }, {
+                        title: '订单编号',
+                        field: 'id',
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                    , {
+                        title: '用户',
+                        field: 'name',
+                       
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                    , {
+                        title: '车主',
+                        field: 'price',
+                       
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                    , {
+                        title: '状态',
+                        field: 'id',
+                       
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                    , {
+                        title: '单价',
+                        field: 'id',
+                       
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                       , {
+                        title: '时间',
+                        field: 'id',
+                     
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    },
+                    {
+                        title: '总价',
+                        field: 'id',
+                     
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                    ,
+                    {
+                        title: '日期',
+                        field: 'id',
+                        visible:false,
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                    ,
+                    {
+                        title: '收益',
+                        field: 'id',
+                        visible:false,
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                    ,
+                    {
+                        title: '佣金',
+                        field: 'id',
+                        visible:false,
+                        align: 'center',
+                        valign: 'middle',
+                        sortable: true,
+                        footerFormatter: totalTextFormatter
+                    }
+                       , {
+                        field: 'operate',
+                        title: '结款状态',
+                        align: 'center',
+                        events: operateEvents,
+                        formatter: operateFormatter
+                    }
+                ]            
+            ]
+        });
+        // sometimes footer render error.
+        setTimeout(function () {
+            $table.bootstrapTable('resetView');
+        }, 200);
+        $table.on('check.bs.table uncheck.bs.table ' +
+                'check-all.bs.table uncheck-all.bs.table', function () {
+            $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+            // save your data, here just save the current page
+            selections = getIdSelections();
+            // push or splice the selections if you want to save all data selections
+        });
+        $table.on('expand-row.bs.table', function (e, index, row, $detail) {
+            if (index % 2 == 1) {
+                $detail.html('Loading from ajax request...');
+                $.get('LICENSE', function (res) {
+                    $detail.html(res.replace(/\n/g, '<br>'));
+                });
+            }
+        });
+        $table.on('all.bs.table', function (e, name, args) {
+            console.log(name, args);
+        });
+        $remove.click(function () {
+            var ids = getIdSelections();
+            $table.bootstrapTable('remove', {
+                field: 'id',
+                values: ids
+            });
+            $remove.prop('disabled', true);
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
+    }
+    function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+            return row.id
+        });
+    }
+    function responseHandler(res) {
+        $.each(res.rows, function (i, row) {
+            row.state = $.inArray(row.id, selections) !== -1;
+        });
+        return res;
+    }
+    function detailFormatter(index, row) {
+        var html = [];
+        $.each(row, function (key, value) {
+            html.push('<p><b>' + key + ':</b> ' + value + '</p>');
+        });
+        return html.join('');
+    }
+    function operateFormatter(value, row, index) {
+        if(index%2==1){
+            return [
+            '<button type="button" class="am-btn am-btn-success am-btn-xs">已结款</button>'
+        ].join('');
+           
+        }
+          if(index%2!=1){
+            return [
+            '<button type="button" class="am-btn am-btn-warning am-btn-xs">未结款</button>'
+        ].join('');
+           
+        }
+       
+    }
+    window.operateEvents = {
+        'click .like': function (e, value, row, index) {
+             
+        },
+        'click .clock': function (e, value, row, index) {
+            alert("锁定："+[row.id])
+        },
+        'click .remove': function (e, value, row, index) {
+            $table.bootstrapTable('remove', {
+                field: 'id',
+                values: [row.id]
+            });
+        }
+    };
+    function totalTextFormatter(data) {
+        return 'Total';
+    }
+    function totalNameFormatter(data) {
+        return data.length;
+    }
+    function totalPriceFormatter(data) {
+        var total = 0;
+        $.each(data, function (i, row) {
+            total += +(row.price.substring(1));
+        });
+        return '$' + total;
+    }
+    function getHeight() {
+        return $(window).height() - $('h1').outerHeight(true);
+    }
+    $(function () {
+        var scripts = [
+                location.search.substring(1) || 'bootstarp-table/bootstrap-table.js',
+                'bootstarp-table/extensions/export/bootstrap-table-export.js',
+                'bootstarp-table/tableExport.js',
+                'bootstarp-table/extensions/editable/bootstrap-table-editable.js',
+                'bootstarp-table/bootstrap-editable.js'
+            ],
+            eachSeries = function (arr, iterator, callback) {
+                callback = callback || function () {};
+                if (!arr.length) {
+                    return callback();
+                }
+                var completed = 0;
+                var iterate = function () {
+                    iterator(arr[completed], function (err) {
+                        if (err) {
+                            callback(err);
+                            callback = function () {};
+                        }
+                        else {
+                            completed += 1;
+                            if (completed >= arr.length) {
+                                callback(null);
+                            }
+                            else {
+                                iterate();
+                            }
+                        }
+                    });
+                };
+                iterate();
+            };
+        eachSeries(scripts, getScript, initTable);
+    });
+    function getScript(url, callback) {
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.src = url;
+        var done = false;
+        // Attach handlers for all browsers
+        script.onload = script.onreadystatechange = function() {
+            if (!done && (!this.readyState ||
+                    this.readyState == 'loaded' || this.readyState == 'complete')) {
+                done = true;
+                if (callback)
+                    callback();
+                // Handle memory leak in IE
+                script.onload = script.onreadystatechange = null;
+            }
+        };
+        head.appendChild(script);
+        // We handle everything using the script element injection
+        return undefined;
+    }
+        
+    $("#onecli").click(function(){
+        $('#my-alert').on('open.modal.amui', function(){
+          console.log('第一个演示弹窗打开了');
+        });
+       
+    })    
+        
+    </script>
+</body>
+
+</html>
