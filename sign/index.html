@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-<div class="am-g" id="back" >
+<div class="am-g" id="back" style="width: 100%">
 	<!-- LOGO -->
 <!--	<div class="am-u-sm-12 am-text-center" >
 		 <i class="am-icon-twitch myapp-login-logo"></i>
@@ -102,9 +102,37 @@
 <script src="js/amazeui.min.js"></script>
 <script src="js/app.js"></script>
    <script type="text/javascript">
+   var winWidth = 0;
+   var winHeight = 0;
+   function findDimensions()
+   {
+   if (window.innerWidth)
+   winWidth = window.innerWidth;
+   else if ((document.body) && (document.body.clientWidth))
+   winWidth = document.body.clientWidth;
+
+   if (window.innerHeight)
+   winHeight = window.innerHeight;
+   else if ((document.body) && (document.body.clientHeight))
+   winHeight = document.body.clientHeight;
+
+   if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+   {
+   winHeight = document.documentElement.clientHeight;
+   winWidth = document.documentElement.clientWidth;
+   }
+
+   }
+   findDimensions();
+   window.onresize=findDimensions;
+       
+   $("#back").css("height",winHeight)   
+       
+       
    $(function(){  
-       $("#back").css("width",window.screen.width); 
-       $("#back").css("height",window.screen.height); 
+       
+       
+
    });  
   </script>   
 </body>
